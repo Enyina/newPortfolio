@@ -35,14 +35,14 @@ const Experience = () => {
             <article className="experience__detail">
               <BsPatchCheckFill className="experience__detail-icon" />
               <div>
-                <h4>React</h4>
+                <h4>React.JS</h4>
                 <small className="text-light">Experinced</small>
               </div>
             </article>
             <article className="experience__detail">
               <BsPatchCheckFill className="experience__detail-icon" />
               <div>
-                <h4>Next.js</h4>
+                <h4>Next.JS</h4>
                 <small className="text-light">Intermediate</small>
               </div>
             </article>
@@ -63,21 +63,21 @@ const Experience = () => {
             <article className="experience__detail">
               <BsPatchCheckFill className="experience__detail-icon" />
               <div>
-                <h4>Node JS</h4>
+                <h4>Node.JS</h4>
                 <small className="text-light">Experinced</small>
               </div>
             </article>
             <article className="experience__detail">
               <BsPatchCheckFill className="experience__detail-icon" />
               <div>
-                <h4>MongoDb</h4>
+                <h4>MongoDB</h4>
                 <small className="text-light">Experinced</small>
               </div>
             </article>
             <article className="experience__detail">
               <BsPatchCheckFill className="experience__detail-icon" />
               <div>
-                <h4>PostgrSQl</h4>
+                <h4>PostgreSQl</h4>
                 <small className="text-light">Intermediate</small>
               </div>
             </article>
@@ -91,14 +91,21 @@ const Experience = () => {
             <article className="experience__detail">
               <BsPatchCheckFill className="experience__detail-icon" />
               <div>
-                <h4>Nest JS</h4>
+                <h4>Nest.JS</h4>
                 <small className="text-light">Intermediate</small>
               </div>
             </article>
             <article className="experience__detail">
               <BsPatchCheckFill className="experience__detail-icon" />
               <div>
-                <h4>Knex</h4>
+                <h4>Docker</h4>
+                <small className="text-light">Intermediate</small>
+              </div>
+            </article>
+            <article className="experience__detail">
+              <BsPatchCheckFill className="experience__detail-icon" />
+              <div>
+                <h4>AWS</h4>
                 <small className="text-light">Intermediate</small>
               </div>
             </article>
