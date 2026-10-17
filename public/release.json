@@ -1,0 +1,11 @@
+{
+  "app": "Matthew Enyina portfolio",
+  "release": "dynamic-portfolio",
+  "version": "2026-10-17-main",
+  "source": "Enyina/newPortfolio",
+  "branch": "main",
+  "features": [
+    "responsive-public-portfolio",
+    "published-project-details"
+  ]
+}
