@@ -136,3 +136,15 @@ test('direct email and the original message form are both available',()=>{
   assert.match(source,/method="POST"/);
   for(const field of ['contact-name','contact-email','contact-message']) assert.ok(source.includes(field));
 });
+
+
+test('the opening section shows a real, accessible local portrait',()=>{
+  const source=readFileSync('src/portfolio/FigmaPortfolio.jsx','utf8');
+  const img=readFileSync('src/assets/me.png');
+  assert.deepEqual([...img.subarray(0,8)],[137,80,78,71,13,10,26,10]);
+  assert.match(source,/import heroPortrait from '\.\.\/assets\/me\.png'/);
+  assert.match(source,/className="fm-hero-portrait"/);
+  assert.match(source,/alt="Matthew Enyina wearing a grey blazer and white turtleneck"/);
+  assert.match(source,/width="483" height="626"/);
+  assert.match(source,/loading="eager"/);
+});
