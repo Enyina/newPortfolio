@@ -1,7 +1,7 @@
 name: Portfolio quality gates
 on:
   push:
-    branches: [feat/dynamic-portfolio-rebuild]
+    branches: [main, feat/dynamic-portfolio-rebuild]
   pull_request:
 jobs:
   build:
