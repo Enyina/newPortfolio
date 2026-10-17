@@ -10,7 +10,14 @@ const visibleIds=new Set(getVisibleSections().map(section=>section.id));
 const links=[['About','about'],['Experience','experience'],['Projects','projects'],['Skills','skills'],['Contact','contact'],['Résumé','resume']].filter(([,id])=>id==='resume'||visibleIds.has(id==='projects'?'work':id));
 function External({href,children}){const url=safeExternal(href);return url?<a href={url} target="_blank" rel="noopener noreferrer">{children}</a>:null}
 function Header(){const [open,setOpen]=useState(false);return <header className="fm-header"><div className="fm-container fm-header-inner"><a href="/" className="fm-brand">M<span>.</span></a><button className="fm-menu" type="button" aria-expanded={open} aria-label="Toggle navigation" onClick={()=>setOpen(!open)}>☰</button><nav aria-label="Primary navigation" className={open?'fm-nav fm-nav-open':'fm-nav'}>{links.map(([name,id])=><a key={id} href={id==='resume'?'/resume':'/#'+id} onClick={()=>setOpen(false)}>{name}</a>)}</nav><a className="fm-header-contact" href={'mailto:'+site.email}>Let's talk ↗</a></div></header>}
-function Title({label,title,subtitle}){return <div className="fm-title"><span className="fm-kicker"><b>✳</b> {label}</span><h2>{titfunction Hero(){
+function Title({label,title,subtitle}){
+  return <div className="fm-title">
+    <span className="fm-kicker"><b>✳</b> {label}</span>
+    <h2>{title}</h2>
+    {subtitle&&<p>{subtitle}</p>}
+  </div>;
+}
+function Hero(){
   return <section className="fm-hero" id="hero" aria-labelledby="hero-title">
     <div className="fm-hero-glow"/>
     <div className="fm-container fm-hero-layout">
@@ -32,7 +39,6 @@ function Title({label,title,subtitle}){return <div className="fm-title"><span cl
     </div>
   </section>;
 }
-nts <span>·</span> AI</div></div></section>}
 function Stats(){const stats=[['6+ years','Production engineering · CV'],['Full-stack','Web, mobile and APIs'],['Real-time','Requests, events and workflows'],['Independent','Building and learning in public']];return <section className="fm-stats" aria-label="Areas of expertise"><div className="fm-container fm-stats-grid">{stats.map(([a,b])=><div key={a}><strong>{a}</strong><span>{b}</span></div>)}</div></section>}
 function About(){return <section id="about" className="fm-section fm-about"><div className="fm-container fm-about-grid"><div><span className="fm-kicker"><b>01</b> / ABOUT</span><h2>I solve the problem <em>behind</em> the problem.</h2></div><div><p>{site.about}</p><p>I bring product thinking into engineering decisions, from understanding what customers need to keeping critical operations reliable after launch.</p><a href="#contact" className="fm-inline-link">Let's work together ↗</a></div></div></section>}
 function Experience(){return <section id="experience" className="fm-section"><div className="fm-container"><Title label="02 / EXPERIENCE" title="Where I've made an impact" subtitle="Building useful products, integrating systems, and improving production reliability."/><div className="fm-timeline">{experience.map((j,i)=><article className="fm-job" key={j.id}><span className="fm-job-index">{String(i+1).padStart(2,'0')}</span><div><h3>{j.title}</h3><p className="fm-job-company">{j.company}</p><p className="fm-job-copy">{j.description}</p>{j.highlight&&<p className="fm-job-proof">{j.highlight}</p>}</div><small>{j.period}</small></article>)}</div><div className="fm-resume-prompt"><a href="/resume" className="fm-inline-link">View full résumé · Print or save as PDF ↗</a></div></div></section>}
