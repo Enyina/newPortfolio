@@ -1,0 +1,41 @@
+.resume-page{padding-top:65px;padding-bottom:110px;max-width:950px;color:#f2f1ed}
+.resume-page a{color:#e8823a}.resume-page a:hover{text-decoration:underline}
+.resume-page__actions{display:flex;gap:15px;align-items:center;justify-content:space-between;border-bottom:1px solid #393a3d;padding-bottom:20px;margin-bottom:58px}
+.resume-page__actions button{border:1px solid #606068;background:#202123;color:#f2f1ed;border-radius:99px;padding:11px 19px;cursor:pointer;font:inherit}
+.resume-page__actions button:focus-visible{outline:2px solid #e8823a;outline-offset:3px}
+.resume-page__heading{border-bottom:2px solid #e8823a;padding-bottom:42px}
+.resume-page__eyebrow{font-size:12px;color:#e8823a;text-transform:uppercase;letter-spacing:.13em}
+.resume-page h1{font-size:clamp(3rem,7vw,5.1rem);line-height:1.05;letter-spacing:-.06em;margin:14px 0 12px}
+.resume-page__role{font-size:1.08rem;color:#f2f1ed;font-weight:650}
+.resume-page__meta{font-size:.88rem;color:#a3a6ab;margin-top:10px}
+.resume-page__links{display:flex;flex-wrap:wrap;gap:22px;margin-top:22px;font-size:.85rem}
+.resume-page section{padding:34px 0;border-bottom:1px solid #2b2c2f}
+.resume-page h2{font-size:1.15rem;letter-spacing:.06em;text-transform:uppercase;color:#e8823a;margin-bottom:16px}
+.resume-page h3{font-size:1rem;line-height:1.4;margin-bottom:9px}
+.resume-page p,.resume-page li{font-size:.89rem;line-height:1.7;color:#bfc1c4}
+.resume-page__job{margin-bottom:28px}.resume-page__job:last-child{margin-bottom:0}
+.resume-page__job-heading{display:flex;flex-wrap:wrap;align-items:flex-start;justify-content:space-between;gap:8px 18px}
+.resume-page__job-heading span{color:#9fa2a6;font-size:.8rem}
+.resume-page__job ul{padding-left:20px;margin:10px 0 0}.resume-page__job li{margin-bottom:6px}
+.resume-page__skills{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.resume-page__work{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.resume-page__work article{border:1px solid #313235;border-radius:8px;padding:15px}
+.resume-page__footnote{padding-top:24px;font-size:.75rem!important;color:#999!important}
+@media(max-width:700px){.resume-page{padding-top:35px}.resume-page__skills,.resume-page__work{grid-template-columns:1fr}}
+@media print{
+  @page{size:A4;margin:14mm}
+  html,body,.fm-page{background:#fff!important;color:#171717!important}
+  .fm-header,.fm-footer,.resume-page__actions,.fm-skip{display:none!important}
+  .resume-page{width:100%;max-width:none;margin:0!important;padding:0!important;color:#171717!important}
+  .resume-page section{break-inside:avoid;padding:18px 0}
+  .resume-page__job{break-inside:avoid;margin-bottom:15px}
+  .resume-page h1{font-size:31pt}
+  .resume-page h2{font-size:11pt}
+  .resume-page h3{font-size:10pt}
+  .resume-page p,.resume-page li{color:#252525!important;font-size:9pt}
+  .resume-page a{color:#171717!important}
+  .resume-page__role{color:#171717!important}
+  .resume-page__meta,.resume-page__job-heading span,.resume-page__eyebrow{color:#444!important}
+  .resume-page__work article{border:1px solid #ccc}
+  .resume-page__footnote{color:#555!important}
+}
