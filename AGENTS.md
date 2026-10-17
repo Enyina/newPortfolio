@@ -23,3 +23,9 @@ Owner-approved delivery workflow (17 October 2026): commit directly to main to a
 - Main includes the modern React experience; GitHub Actions runs on main.
 - `public/release.json` is the production smoke-test marker. If the published site still looks old, check the file at `https://enyina.netlify.app/release.json`. If absent, verify Netlify's production branch, auto-publish/deploy lock and the latest production deploy SHA.
 - Database and auth must be server-controlled; never expose drafts or service-role keys to public React bundles.
+
+## Saving work and explaining updates
+
+When an authorized change is complete, save it in a focused Git commit with a clear description. Do not leave completed work uncommitted. Keep unrelated work and private information out of the commit. Follow this project's existing delivery and approval requirements; do not assume committing gives permission to push or publish. If a higher-priority rule or direct instruction prevents a commit, explain that clearly.
+
+For each meaningful change, update `RELEASE_NOTES.md` using **only everyday English that a person with no software background can understand**. Explain what changed, why it matters, and anything people still cannot use. Avoid technical language, implementation details, command names, source filenames, abbreviations and internal test names. Do not say a change is live or available until publication is verified. Keep technical checks in engineering reports, not release notes.
