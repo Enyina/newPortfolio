@@ -32,3 +32,9 @@ This update changes how progress is explained. It does not change what visitors 
 Future changes will compare different ways to present work clearly, help visitors find what they need, and make the site easier to use. We'll check what actually works instead of choosing a style simply because it looks fashionable.
 
 The website's existing features have not changed as part of this update.
+
+**Easier requests for website improvements**
+
+You can describe the change you want in everyday words. Future suggestions should focus on making the website clearer and easier to use, compare useful ideas when needed, and explain where those ideas came from.
+
+The website's features have not changed as part of this update.
