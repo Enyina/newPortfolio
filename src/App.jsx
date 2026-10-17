@@ -1,2 +1,2 @@
-import DynamicPortfolio from './portfolio/DynamicPortfolio';
-export default function App() { return <DynamicPortfolio />; }
+import FigmaPortfolio from './portfolio/FigmaPortfolio';
+export default function App() { return <FigmaPortfolio />; }
