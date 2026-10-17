@@ -80,6 +80,8 @@ test('invalid collections are rejected',()=>{
 test('direct routes work only with safe slugs',()=>{
   assert.deepEqual(resolveRoute('/'),{kind:'home'});
   assert.deepEqual(resolveRoute('/index.html'),{kind:'home'});
+  assert.deepEqual(resolveRoute('/resume'),{kind:'resume'});
+  assert.deepEqual(resolveRoute('/resume/'),{kind:'resume'});
   assert.deepEqual(resolveRoute('/work/moatt-studio'),{kind:'project',slug:'moatt-studio'});
   assert.deepEqual(resolveRoute('/project/shop-kego/'),{kind:'project',slug:'shop-kego'});
   for(const p of ['/admin','/work/../secret','/work/%2F','/work/a/b','/work/BIG'])assert.equal(resolveRoute(p).kind,'not-found');
@@ -116,4 +118,13 @@ test('newer private research and employer case studies stay honest about evidenc
 
 test('current contact channel is available',()=>{
   assert.equal(site.email,'enyina3848@gmail.com');
+});
+
+test('the public resume can be printed or saved without exposing a phone number',()=>{
+  const source=readFileSync('src/portfolio/ResumePage.jsx','utf8');
+  const ui=readFileSync('src/portfolio/FigmaPortfolio.jsx','utf8');
+  assert.match(source,/window\.print\(\)/);
+  assert.match(ui,/ResumePage/);
+  assert.doesNotMatch(source,/\+234[\s\d]{9,}/);
+  assert.match(source,/mailto:/);
 });
