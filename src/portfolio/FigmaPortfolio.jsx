@@ -53,7 +53,18 @@ function Services(){
     <div className="fm-services">{services.map(s=><article key={s.id}><h3>{s.title}</h3><p>{s.detail}</p></article>)}</div>
   </div></section>;
 }
-function Contact(){return <section id="contact" className="fm-contact"><div className="fm-contact-glow"/><div className="fm-container"><span className="fm-kicker"><b>05</b> / CONTACT</span><h2>Have something worth building?</h2><p>Let's turn your next product challenge into something that works.</p><a className="fm-button fm-button-primary" href={'mailto:'+site.email}>Start a conversation ↗</a><div className="fm-contact-social"><External href={site.github}>GitHub ↗</External><External href={site.linkedin}>LinkedIn ↗</External><span>{site.location}</span></div></div></section>}
+function Contact(){return <section id="contact" className="fm-contact"><div className="fm-contact-glow"/><div className="fm-container"><span className="fm-kicker"><b>05</b> / CONTACT</span><h2>Have something worth building?</h2><p>Let's turn your next product challenge into something that works.</p><a className="fm-button fm-button-primary" href={'mailto:'+site.email}>Start a conversation ↗</a>
+  <form className="fm-contact-form" action="https://formspree.io/f/xbjbvgoo" method="POST">
+    <div className="fm-contact-form-heading"><h3>Or send a message</h3><p>Share a little about your project or opportunity.</p></div>
+    <div className="fm-contact-form-fields">
+      <div><label htmlFor="contact-name">Your name</label><input id="contact-name" name="name" type="text" autoComplete="name" maxLength="120" required placeholder="Your name"/></div>
+      <div><label htmlFor="contact-email">Email address</label><input id="contact-email" name="email" type="email" autoComplete="email" required placeholder="you@example.com"/></div>
+      <div className="fm-contact-form-message"><label htmlFor="contact-message">What can I help with?</label><textarea id="contact-message" name="message" rows="4" minLength="10" maxLength="5000" required placeholder="Tell me about the problem or product..."/></div>
+    </div>
+    <button type="submit" className="fm-button fm-button-primary">Send message ↗</button>
+    <small>Messages are sent through Formspree, the provider used by the earlier portfolio.</small>
+  </form>
+  <div className="fm-contact-social"><External href={site.github}>GitHub ↗</External><External href={site.linkedin}>LinkedIn ↗</External><span>{site.location}</span></div></div></section>}
 function Detail({slug}){
   const p=findProject(slug);
   return <main className="fm-container fm-detail" id="main-content">
