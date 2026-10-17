@@ -83,3 +83,5 @@
 .fm-evidence-note{max-width:790px;margin:15px 0 32px!important;padding:17px 20px;border-left:2px solid var(--amber);background:#151518;color:var(--muted);font-size:12px}
 .fm-detail>.fm-chips{margin:20px 0}
 @media(max-width:530px){.fm-archive-grid{grid-template-columns:1fr}.fm-archive summary span{display:block;padding:4px 0 0}}
+
+.fm-resume-prompt{margin-top:23px;padding-top:22px;border-top:1px solid var(--line)}
