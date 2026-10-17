@@ -1,5 +1,20 @@
 # What's new on the portfolio
 
+## October 17, 2026 — A face behind the work
+
+**What changed**
+
+The opening section now includes my existing professional photograph, positioned beside my introduction on larger screens and beneath it on smaller screens.
+
+**Why it matters**
+
+People visiting the portfolio can recognize the engineer they might work with, without losing the dark-and-orange design.
+
+**What to know**
+
+This change uses an existing photograph. It does not generate or retouch a new face. Publication on the live website still needs to be verified.
+
+
 ## October 17, 2026 — A clearer picture of my work
 
 **What changed**
