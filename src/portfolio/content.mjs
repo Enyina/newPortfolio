@@ -194,6 +194,7 @@ export const findProject = (slug, rows = projects) => validSlug(slug)
 
 export function resolveRoute(path) {
   if (path === '/' || path === '/index.html') return {kind:'home'};
+  if (path === '/resume' || path === '/resume/') return {kind:'resume'};
   if (typeof path !== 'string') return {kind:'not-found'};
   const match = /^\/(?:work|project)\/([^/]+)\/?$/.exec(path);
   return match && validSlug(match[1]) ? {kind:'project',slug:match[1]} : {kind:'not-found'};
