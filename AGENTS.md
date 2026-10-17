@@ -3,6 +3,10 @@
 Canonical global and cross-project engineering rules: https://github.com/Enyina/ai-engineering-config
 Scope: this personal web-product portfolio. Do not apply employer-specific rules in a personal project or leak company information.
 
+## Everyday portfolio requests
+
+When someone asks for a design or coding improvement in ordinary words, start from the existing portfolio and its current rules. Compare credible alternatives only for meaningful decisions, name their sources, explain benefits and costs in plain English, and verify the result against the website. The personal config library can be consulted when actually accessible, including its `bin/ask` helper; otherwise use the local rules and available public sources. Keep all existing portfolio security and delivery requirements.
+
 ## Reverse Engineering First
 Inspect existing source, live product behavior and proven design/CMS patterns; compare choices with evidence and independently implement appropriate behavior. Verify assumptions and measure results. Preserve project identity and original assets when useful.
 
