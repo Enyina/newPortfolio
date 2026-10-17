@@ -1,0 +1,8 @@
+---
+description: Portfolio project-specific engineering and security context
+alwaysApply: true
+---
+
+Follow this project's existing root `AGENTS.md` for the actual React portfolio architecture, public website, admin security, release process and testing requirements. Protect server-side authorization and never expose private drafts or secret keys in the public bundle.
+
+Central personal policy: Enyina/ai-engineering-config at 2fa5392dc21524c522b613cb6cc869fd3eace4f2; this link does not auto-import content. Do not activate Moatt 3D editor or game-specific rules for this portfolio.
