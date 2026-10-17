@@ -16,4 +16,10 @@ Only published, visible content ships to anonymous browser clients. Never embed 
 All reads/writes of private content require verified server identity with an explicit email allowlist, including enyina3848@gmail.com. Never rely on a client-side email string or localStorage to grant access. Confirm supported OAuth/OIDC provider; ChatGPT sign-in cannot be assumed available. Use CSRF protection, validation, idempotency, media upload checks, draft/preview/publish separation, logs and backup.
 
 ## Delivery
-Use branch and PR, run published-content tests and production build, compare responsive views, verify Netlify staging and original contact flow before production release. Document durable lessons and improve shared rules in ai-engineering-config when access permits.
+Owner-approved delivery workflow (17 October 2026): commit directly to main to avoid manual PR merges. Preserve rollback history, run tests and production build on main, and verify Netlify production publication and the original contact flow. Do not assume that a GitHub push proves the production deploy succeeded. Document durable lessons and improve shared rules in ai-engineering-config when access permits.
+
+
+## Current deployment verification
+- Main includes the modern React experience; GitHub Actions runs on main.
+- `public/release.json` is the production smoke-test marker. If the published site still looks old, check the file at `https://enyina.netlify.app/release.json`. If absent, verify Netlify's production branch, auto-publish/deploy lock and the latest production deploy SHA.
+- Database and auth must be server-controlled; never expose drafts or service-role keys to public React bundles.
