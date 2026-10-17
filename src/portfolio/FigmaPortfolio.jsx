@@ -2,7 +2,6 @@ import {useState} from 'react';
 import {site,experience,skills,services,getFeaturedProjects,getArchiveProjects,getVisibleSections,findProject,resolveRoute,safeExternal} from './content.mjs';
 import './figma-layout.css';
 import ResumePage from './ResumePage';
-import heroPortrait from '../assets/me.png';
 
 const work=getFeaturedProjects();
 const archived=getArchiveProjects();
@@ -32,10 +31,6 @@ function Hero(){
         </div>
         <div className="fm-hero-foot">Node.js <span>·</span> TypeScript <span>·</span> React Native <span>·</span> Payments <span>·</span> AI</div>
       </div>
-      <figure className="fm-hero-portrait">
-        <img src={heroPortrait} alt="Matthew Enyina wearing a grey blazer and white turtleneck" width="483" height="626" loading="eager" decoding="async"/>
-        <figcaption>Matthew Enyina <span aria-hidden="true">/</span> Lagos, Nigeria</figcaption>
-      </figure>
     </div>
   </section>;
 }
