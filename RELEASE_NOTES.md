@@ -1,5 +1,24 @@
 # What's new on the portfolio
 
+## October 17, 2026 — A clearer picture of my work
+
+**What changed**
+
+The portfolio now highlights five recent pieces of work: pharmacy ordering, safer payments, voice-assisted ordering, a clothing-design prototype, and a personal approach to improving work with AI.
+
+The older applications have moved into an optional “Earlier projects” area. Their original pages and source links remain available.
+
+The work history now reflects the latest résumé. Visitors can also open a clean, printable résumé page and save it as a PDF from their browser, without a personal phone number appearing on the page.
+
+**Why it matters**
+
+Someone considering a job offer or project can see the problem, the contribution and the limitations of each piece of work much more clearly.
+
+**What to know**
+
+These changes have passed automatic checks, but a live production check on Netlify is still outstanding. The clothing designer is labeled a prototype, the AI workflow is still in progress, and some career measurements still need independent confirmation. The private editing dashboard is not available yet.
+
+
 ## October 17, 2026
 
 **Clearer progress updates**
