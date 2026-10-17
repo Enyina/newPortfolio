@@ -10,6 +10,8 @@ The older applications have moved into an optional “Earlier projects” area. 
 
 The work history now reflects the latest résumé. Visitors can also open a clean, printable résumé page and save it as a PDF from their browser, without a personal phone number appearing on the page.
 
+The contact form has also returned alongside the direct email link, so visitors can choose how to start a conversation.
+
 **Why it matters**
 
 Someone considering a job offer or project can see the problem, the contribution and the limitations of each piece of work much more clearly.
