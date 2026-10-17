@@ -98,3 +98,30 @@
 .fm-contact-form button{margin-top:19px}
 .fm-contact-form small{display:block;color:#9a9da3;font-size:10px;margin-top:12px}
 @media(max-width:600px){.fm-contact-form{padding:18px}.fm-contact-form-fields{grid-template-columns:1fr}.fm-contact-form-message{grid-column:auto}}
+
+
+/* An existing portrait grounds the editorial introduction in a real person. */
+.fm-hero-layout{position:relative;z-index:1;display:grid;grid-template-columns:minmax(0,1.6fr) minmax(245px,.85fr);align-items:center;gap:clamp(35px,5vw,74px)}
+.fm-hero .fm-hero-content{text-align:left;min-width:0}
+.fm-hero .fm-hero-actions{justify-content:flex-start}
+.fm-hero .fm-hero-content h1{font-size:clamp(49px,6vw,78px)}
+.fm-hero .fm-hero-content>p{max-width:640px}
+.fm-hero-portrait{position:relative;isolation:isolate;margin:0;max-width:340px;width:100%;justify-self:end}
+.fm-hero-portrait:before{content:"";position:absolute;z-index:-1;inset:-9px -9px 52px 9px;border:1px solid rgba(232,130,58,.54);border-radius:20px;background:linear-gradient(145deg,rgba(232,130,58,.2),transparent 44%)}
+.fm-hero-portrait img{display:block;width:100%;height:auto;aspect-ratio:483/626;object-fit:cover;object-position:center;border-radius:15px;background:#20384d;border:1px solid #47505c;box-shadow:0 24px 65px rgba(0,0,0,.24)}
+.fm-hero-portrait figcaption{display:flex;align-items:center;gap:10px;padding:16px 1px 0;font-size:11px;letter-spacing:.03em;color:#9a9ca0;text-align:left}
+.fm-hero-portrait figcaption span{color:var(--amber)}
+@media(max-width:850px){
+  .fm-hero-layout{grid-template-columns:minmax(0,1.1fr) minmax(195px,.75fr);gap:25px}
+  .fm-hero-portrait{max-width:290px}
+  .fm-hero .fm-hero-content h1{font-size:clamp(43px,6.6vw,62px)}
+  .fm-hero .fm-hero-pill{font-size:10px}
+}
+@media(max-width:660px){
+  .fm-hero-layout{grid-template-columns:1fr;gap:50px}
+  .fm-hero .fm-hero-content{text-align:center}
+  .fm-hero .fm-hero-actions{justify-content:center}
+  .fm-hero-portrait{max-width:min(310px,75vw);justify-self:center}
+  .fm-hero .fm-hero-content h1{font-size:clamp(49px,10vw,73px)}
+  .fm-hero{padding-block:78px 87px}
+}
