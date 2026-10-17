@@ -1,11 +1,13 @@
 {
   "app": "Matthew Enyina portfolio",
-  "release": "dynamic-portfolio",
-  "version": "2026-10-17-main",
+  "release": "proof-led-portfolio",
+  "version": "2026-10-17-curated-resume",
   "source": "Enyina/newPortfolio",
   "branch": "main",
-  "features": [
-    "responsive-public-portfolio",
-    "published-project-details"
+  "includes": [
+    "five current case studies",
+    "six earlier archived projects",
+    "October career timeline",
+    "printable public resume"
   ]
 }
