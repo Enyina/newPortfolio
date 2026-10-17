@@ -1,24 +1,46 @@
 # Matthew Enyina — Portfolio
 
-Canonical existing website source repository: Enyina/newPortfolio
-Published domain: https://enyina.netlify.app/
+The source repository for the owner's Netlify portfolio: https://enyina.netlify.app/
+
+## What visitors get
+
+- A Figma Make-inspired dark editorial layout, using amber accents.
+- A current career story based on the owner's 5 October 2026 resume.
+- Five selected case studies with problem, contribution, outcome, lessons and honest status labels.
+- An optional archive with six earlier projects and existing detail links.
+- A public resume at \`/resume\`, printable or savable as PDF by the visitor. It intentionally omits a personal phone number.
+- Email and Formspree message options.
+
+**Important:** A GitHub commit and a passing build do not prove the production Netlify site has been updated. See the public version marker at \`/release.json\` and check Netlify's production deploy separately.
 
 ## Development
 
-- Node 20, then npm ci
-- npm start — local development
-- node --test tests/*.test.mjs — published-only content tests
-- CI=true npm run build — production build
+1. Install Node 20 or newer.
+2. Run \`npm ci\`.
+3. Run \`npm start\` for development.
+4. Run \`node --test tests/*.test.mjs\` for content, privacy and route checks.
+5. Run \`CI=true npm run build\` for a production build.
 
-## Architecture
+## Canonical source and paths
 
-src/portfolio/content.mjs contains only publicly published content, current experience, original portfolio projects, configuration and safe selectors.
-src/portfolio/DynamicPortfolio.jsx is the modern responsive public site and /work/:slug detail page.
-src/portfolio/assets.js reuses original images.
-The original React component files remain for comparison and rollback.
+- \`src/App.jsx\` loads the active \`src/portfolio/FigmaPortfolio.jsx\` layout. The older \`DynamicPortfolio.jsx\` is not active.
+- \`src/portfolio/content.mjs\` contains **public only** profile, career, project, section and routing information.
+- \`src/portfolio/figma-layout.css\` contains the responsive Figma-inspired appearance.
+- \`src/portfolio/ResumePage.jsx\` and \`resume.css\` provide the public printable resume.
+- \`public/_redirects\` provides direct-link refreshes on Netlify.
+- \`docs/CAREER_EVIDENCE_LEDGER.md\` distinguishes owner-reported achievements from independently established evidence.
+- \`AGENTS.md\` refers to the personal private engineering standards and this project's additional guardrails.
 
-The /work/:slug route reloads through the Netlify SPA fallback in public/_redirects.
+## Editing and security
 
-## Important limitations
+The public information is currently versioned in Git, **not in a database or content-management dashboard**. Only approved, published information belongs in the client JavaScript bundle. There is no private admin route, draft store, authenticated editor, file-upload service or ChatGPT-login integration yet.
 
-The new interface is committed to a development branch, NOT deployed. The current stack is React/Create React App, not Vinext/D1/R2. A secure admin CMS is NOT implemented yet; editing currently requires updating the public published snapshot. Do not put drafts or auth secrets in frontend code. See docs/PORTFOLIO_REBUILD.md.
+Do not build a browser-password shortcut or store service-role keys in source code. The planned admin requires verified server-side login and a connected storage provider.
+
+## Remaining acceptance checks
+
+- Confirm Netlify production deployment and identify the commit/version served.
+- Visit home, archived projects, direct detail links and \`/resume\` on phone and desktop.
+- Verify a real contact-form delivery without sending unsolicited test messages.
+- Check print or Save as PDF layout.
+- Validate owner approval of employer claim phrasing and case-study media.
