@@ -128,3 +128,11 @@ test('the public resume can be printed or saved without exposing a phone number'
   assert.doesNotMatch(source,/\+234[\s\d]{9,}/);
   assert.match(source,/mailto:/);
 });
+
+test('direct email and the original message form are both available',()=>{
+  const source=readFileSync('src/portfolio/FigmaPortfolio.jsx','utf8');
+  assert.match(source,/mailto:/);
+  assert.match(source,/formspree\.io\/f\/xbjbvgoo/);
+  assert.match(source,/method="POST"/);
+  for(const field of ['contact-name','contact-email','contact-message']) assert.ok(source.includes(field));
+});
