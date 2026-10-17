@@ -125,3 +125,9 @@
   .fm-hero .fm-hero-content h1{font-size:clamp(49px,10vw,73px)}
   .fm-hero{padding-block:78px 87px}
 }
+
+/* Temporarily use a text-first introduction until a portrait is approved. */
+.fm-hero-layout{display:block;max-width:1000px}
+.fm-hero .fm-hero-content{text-align:center;margin-inline:auto}
+.fm-hero .fm-hero-content>p{margin-inline:auto}
+.fm-hero .fm-hero-actions{justify-content:center}
