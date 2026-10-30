@@ -4,7 +4,7 @@ The source repository for the owner's Netlify portfolio: https://enyina.netlify.
 
 ## What visitors get
 
-- A Figma Make-inspired dark editorial layout, using amber accents.
+- An original dark editorial layout with warm amber accents, responsive typography and readable case studies.
 - A current career story based on the owner's 5 October 2026 resume.
 - Five selected case studies, led by the private AI engineering system, with evidence, outcomes and clear limitations.
 - An interactive four-scenario AI engineering exhibit and a real Codex evaluation comparison; it does not connect to a live agent or expose private source.
@@ -38,6 +38,10 @@ The source repository for the owner's Netlify portfolio: https://enyina.netlify.
 The public information is currently versioned in Git, **not in a database or content-management dashboard**. Only approved, published information belongs in the client JavaScript bundle. There is no private admin route, draft store, authenticated editor, file-upload service or ChatGPT-login integration yet.
 
 Do not build a browser-password shortcut or store service-role keys in source code. The planned admin requires verified server-side login and a connected storage provider.
+
+## Quality improvement plan
+
+The current editorial review and prioritized benchmark-based roadmap are in [the portfolio quality plan](docs/PORTFOLIO-WORLD-CLASS-QUALITY-PLAN.md). It distinguishes changes already in source from real-device, accessibility, performance and published-site checks still required. The aim is a credible, genuinely useful portfolio, not an invented perfect score.
 
 ## Remaining acceptance checks
 
