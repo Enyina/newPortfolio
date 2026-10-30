@@ -6,7 +6,8 @@ The source repository for the owner's Netlify portfolio: https://enyina.netlify.
 
 - A Figma Make-inspired dark editorial layout, using amber accents.
 - A current career story based on the owner's 5 October 2026 resume.
-- Five selected case studies with problem, contribution, outcome, lessons and honest status labels.
+- Five selected case studies, led by the private AI engineering system, with evidence, outcomes and clear limitations.
+- An interactive four-scenario AI engineering exhibit and a real Codex evaluation comparison; it does not connect to a live agent or expose private source.
 - An optional archive with six earlier projects and existing detail links.
 - A public resume at \`/resume\`, printable or savable as PDF by the visitor. It intentionally omits a personal phone number.
 - Email and Formspree message options.
@@ -19,7 +20,8 @@ The source repository for the owner's Netlify portfolio: https://enyina.netlify.
 2. Run \`npm ci\`.
 3. Run \`npm start\` for development.
 4. Run \`node --test tests/*.test.mjs\` for content, privacy and route checks.
-5. Run \`CI=true npm run build\` for a production build.
+5. Run \`CI=true npm test -- --watch=false --runInBand\` for the interactive React component tests.
+6. Run \`CI=true npm run build\` for a production build.
 
 ## Canonical source and paths
 
