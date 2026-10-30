@@ -15,13 +15,12 @@ test('the AI engineering case study leads the featured portfolio without displac
 
 test('the model evaluation is not misrepresented as independently proven improvement', () => {
   const featured = findProject('evidence-driven-ai-workflows');
-  assert.match(featured.outcome, /inconclusive/i);
   assert.match(featured.outcome, /323/);
-  assert.match(featured.outcome, /15 baseline and 15 candidate/);
-  assert.match(featured.outcome, /not deployed or proven/i);
-  assert.match(featured.lessons, /still needs end-to-end approval/i);
-  assert.match(aiLab.disclaimer, /not a connected AI agent/i);
-  assert.ok(aiCaseEvidence.some(item => item.level === 'Inconclusive'));
+  assert.match(featured.outcome, /15 Codex answers/);
+  assert.match(featured.outcome, /left it out/i);
+  assert.match(featured.lessons, /caught a reason not to trust/i);
+  assert.match(aiLab.disclaimer, /not a live AI demo/i);
+  assert.ok(aiCaseEvidence.some(item => item.level === 'Not a proven improvement'));
 });
 
 test('case study displays multiple meaningful, explicit user journeys', () => {
