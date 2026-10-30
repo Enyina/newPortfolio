@@ -9,8 +9,8 @@ describe('proof-led portfolio navigation', () => {
     window.history.replaceState({}, '', '/');
     render(<FigmaPortfolio />);
     expect(screen.getByRole('heading', {name:'Matthew Enyina'})).toBeInTheDocument();
-    expect(screen.getByRole('link', {name:/Explore my AI engineering lab/i})).toHaveAttribute('href','#ai-lab');
-    expect(screen.getByRole('heading', {name:/An engineering system that questions its own answers/i})).toBeInTheDocument();
+    expect(screen.getByRole('link', {name:/See my AI project/i})).toHaveAttribute('href','#ai-lab');
+    expect(screen.getByRole('heading', {name:/AI can write code\. I built something that questions it/i})).toBeInTheDocument();
     expect(screen.getByRole('navigation', {name:/Primary navigation/i})).toHaveTextContent('AI Lab');
     expect(screen.getByRole('link', {name:/View résumé/i})).toHaveAttribute('href','/resume');
     expect(document.querySelector('form[action^="https://formspree.io/"]')).not.toBeNull();
@@ -19,10 +19,10 @@ describe('proof-led portfolio navigation', () => {
   test('the private AI case study has real evidence and a visible limitation', () => {
     window.history.replaceState({}, '', '/work/evidence-driven-ai-workflows');
     render(<FigmaPortfolio />);
-    expect(screen.getByRole('heading', {level:1, name:/I built an AI engineering system that questions its own answers/i})).toBeInTheDocument();
-    expect(screen.getByRole('heading', {name:/What the evidence actually shows/i})).toBeInTheDocument();
-    expect(screen.getByText(/323 local tests reported passing/i)).toBeInTheDocument();
-    expect(screen.getByText(/private source and raw traces are intentionally not public/i)).toBeInTheDocument();
-    expect(screen.getByRole('link', {name:/interactive method/i})).toHaveAttribute('href','/#ai-lab');
+    expect(screen.getByRole('heading', {level:1, name:/Building an AI engineering system I can trust/i})).toBeInTheDocument();
+    expect(screen.getByRole('heading', {name:/A closer look/i})).toBeInTheDocument();
+    expect(screen.getByText(/323 checks passed locally/i)).toBeInTheDocument();
+    expect(screen.getByText(/My code and original test sessions stay private/i)).toBeInTheDocument();
+    expect(screen.getByRole('link', {name:/Try the walkthrough/i})).toHaveAttribute('href','/#ai-lab');
   });
 });
