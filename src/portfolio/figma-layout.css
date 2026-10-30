@@ -152,3 +152,45 @@
 .fm-project-featured:hover{border-color:#d8915f}
 @media(max-width:800px){.fm-project-featured{grid-column:span 2}.fm-detail-proof-grid{grid-template-columns:1fr 1fr}}
 @media(max-width:530px){.fm-project-featured{grid-column:span 1}.fm-project-featured .fm-project-main h3{font-size:25px}.fm-detail-proof-grid{grid-template-columns:1fr}}
+
+
+/* Readability and navigation polish, applied after the original style rules. */
+.fm-page{line-height:1.68}
+.fm-kicker{font-size:12px;letter-spacing:.11em}
+.fm-hero-pill{font-size:12px;line-height:1.45}
+.fm-hero-content>p{max-width:680px;font-size:clamp(17px,2vw,21px);line-height:1.65}
+.fm-title>p{font-size:15px;line-height:1.8}
+.fm-stats span{font-size:12px}
+.fm-nav a{font-size:13px;min-height:44px;display:inline-flex;align-items:center}
+.fm-header-contact{min-height:44px;display:inline-flex;align-items:center;font-size:13px}
+.fm-menu{min-width:44px;min-height:44px;align-items:center;justify-content:center}
+.fm-job-copy{font-size:14px;line-height:1.85}
+.fm-job-proof{font-size:13px}
+.fm-project{transition:border-color .18s ease,transform .18s ease}
+.fm-project-top{font-size:12px}
+.fm-project h3{font-size:18px}
+.fm-project p{font-size:13px;line-height:1.75}
+.fm-project-status,.fm-project-spotlight{font-size:11px}
+.fm-project-detail-link{font-size:13px;padding:10px 0}
+.fm-chips span{font-size:11px;line-height:1.35}
+.fm-archive-desc{font-size:14px}
+.fm-archive-grid p,.fm-services p{font-size:13px;line-height:1.8}
+.fm-evidence-note{font-size:13px;line-height:1.8}
+.fm-detail-lead{font-size:clamp(18px,2.4vw,22px)}
+.fm-detail section p{font-size:15px;line-height:1.9}
+.fm-detail-proof-grid article p{font-size:13px}
+.fm-contact-form small{font-size:12px;line-height:1.6}
+.fm-contact-form input,.fm-contact-form textarea{font-size:16px}
+.fm-button{font-size:13px}
+@media(max-width:800px){
+  .fm-nav a{min-height:44px}
+  .fm-menu{display:inline-flex}
+}
+@media(max-width:530px){
+  .fm-hero-pill{font-size:11px}
+  .fm-hero{min-height:auto}
+  .fm-title h2{font-size:clamp(30px,8vw,42px)}
+}
+@media(prefers-reduced-motion:reduce){
+  .fm-project{transition:none;transform:none!important}
+}
