@@ -33,6 +33,19 @@ export default function AIEvidenceLab() {
         </div>)}
       </div>
 
+      <div className="ai-lab-measure" aria-label="One matched real Codex evaluation, not a verified improvement">
+        <div className="ai-lab-measure-description">
+          <span className="fm-kicker"><b>REAL EXPERIMENT / OCT 2026</b></span>
+          <h3>A higher score. A better question.</h3>
+          <p>Codex completed a paired evaluation of a proposed writing skill. The phrase checks improved, but reviewing the real responses exposed lost context. I kept the change unapproved.</p>
+          <span className="ai-lab-measure-status">Verdict: inconclusive — candidate not promoted</span>
+        </div>
+        <div className="ai-lab-bars" aria-label="Phrase-check results in one 15-case comparison">
+          <div className="ai-lab-bar-row"><div><strong>Without skill</strong><span>9 / 15</span></div><div className="ai-lab-bar-track"><span style={{width:'60%'}}/></div></div>
+          <div className="ai-lab-bar-row ai-lab-bar-row-candidate"><div><strong>With candidate</strong><span>11 / 15</span></div><div className="ai-lab-bar-track"><span style={{width:'73.333%'}}/></div></div>
+          <p>Phrase-matching preflight only. Neither bar establishes true task quality, safety or repeatable improvement.</p>
+        </div>
+      </div>
       <div className="ai-lab-workbench">
         <div className="ai-lab-workbench-head">
           <div>
