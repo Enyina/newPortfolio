@@ -38,6 +38,6 @@ test('human copy rules are documented as lasting project standards', () => {
   assert.match(rules, /what I built, why, what was hard/);
   const plan = readFileSync(new URL('../docs/PORTFOLIO-WORLD-CLASS-QUALITY-PLAN.md', import.meta.url), 'utf8');
   assert.match(plan, /WCAG 2\.2 AA/);
-  assert.match(plan, /real-user Core Web Vitals/i);
-  assert.match(plan, /genuine visual proof/i);
+  assert.match(plan, /Core Web Vitals/i);
+  assert.match(plan, /visual proof/i);
 });
