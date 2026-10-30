@@ -23,43 +23,43 @@ function Hero(){
     <div className="fm-hero-glow"/>
     <div className="fm-container fm-hero-layout">
       <div className="fm-hero-content">
-        <span className="fm-hero-pill"><i/> Senior Full-Stack Product Engineer · Open to remote opportunities</span>
+        <span className="fm-hero-pill"><i/> Full-Stack Engineer · AI Systems Builder · Available for remote work</span>
         <h1 id="hero-title">Matthew Enyina</h1>
-        <p>I build products that work in the real world—and engineering systems that challenge assumptions, test AI decisions, and make complex software safer to ship.</p>
+        <p>I build software people rely on, and I’m building my own tools to make AI-assisted engineering more reliable.</p>
         <div className="fm-hero-actions">
-          <a className="fm-button fm-button-primary" href="#ai-lab">Explore my AI engineering lab ↗</a>
+          <a className="fm-button fm-button-primary" href="#ai-lab">See my AI project ↗</a>
           <a className="fm-button fm-button-quiet" href="#projects">Selected work</a>
           <a className="fm-button fm-button-quiet" href={'mailto:'+site.email}>Get in Touch</a>
           <a className="fm-button fm-button-quiet" href="/resume">View résumé ↗</a>
         </div>
-        <div className="fm-hero-foot">Product engineering <span>·</span> AI systems <span>·</span> Reliability <span>·</span> End-to-end delivery</div>
+        <div className="fm-hero-foot">Web & mobile <span>·</span> APIs <span>·</span> Payments <span>·</span> AI tools</div>
       </div>
     </div>
   </section>;
 }
-function Stats(){const stats=[['6+ years','Engineering experience · résumé'],['AI systems','Private research & real-agent evaluation'],['Full-stack','Web, mobile, APIs and infrastructure'],['Evidence-first','Test assumptions before making claims']];return <section className="fm-stats" aria-label="Areas of expertise"><div className="fm-container fm-stats-grid">{stats.map(([a,b])=><div key={a}><strong>{a}</strong><span>{b}</span></div>)}</div></section>}
-function About(){return <section id="about" className="fm-section fm-about"><div className="fm-container fm-about-grid"><div><span className="fm-kicker"><b>01</b> / ABOUT</span><h2>I solve the problem <em>behind</em> the problem.</h2></div><div><p>{site.about}</p><p>I bring product thinking into engineering decisions, from understanding what customers need to keeping critical operations reliable after launch.</p><a href="#contact" className="fm-inline-link">Let's work together ↗</a></div></div></section>}
-function Experience(){return <section id="experience" className="fm-section"><div className="fm-container"><Title label="02 / EXPERIENCE" title="Where I've made an impact" subtitle="Building useful products, integrating systems, and improving production reliability."/><div className="fm-timeline">{experience.map((j,i)=><article className="fm-job" key={j.id}><span className="fm-job-index">{String(i+1).padStart(2,'0')}</span><div><h3>{j.title}</h3><p className="fm-job-company">{j.company}</p><p className="fm-job-copy">{j.description}</p>{j.highlight&&<p className="fm-job-proof">{j.highlight}</p>}</div><small>{j.period}</small></article>)}</div><div className="fm-resume-prompt"><a href="/resume" className="fm-inline-link">View full résumé · Print or save as PDF ↗</a></div></div></section>}
+function Stats(){const stats=[['6+ years','Building software'],['Full-stack','Web, mobile and backend'],['AI tools','Personal engineering project'],['Built to last','Reliability and recovery']];return <section className="fm-stats" aria-label="Areas of expertise"><div className="fm-container fm-stats-grid">{stats.map(([a,b])=><div key={a}><strong>{a}</strong><span>{b}</span></div>)}</div></section>}
+function About(){return <section id="about" className="fm-section fm-about"><div className="fm-container fm-about-grid"><div><span className="fm-kicker"><b>01</b> / ABOUT</span><h2>I like the hard parts <em>of building software.</em></h2></div><div><p>{site.about}</p><p>I care about the details that usually show up after a product launches: the slow request, the failed payment, the flow nobody expected. Fixing those is part of building something good.</p><a href="#contact" className="fm-inline-link">Let's work together ↗</a></div></div></section>}
+function Experience(){return <section id="experience" className="fm-section"><div className="fm-container"><Title label="02 / EXPERIENCE" title="Where I've worked" subtitle="The products I've helped build and the problems I've worked through."/><div className="fm-timeline">{experience.map((j,i)=><article className="fm-job" key={j.id}><span className="fm-job-index">{String(i+1).padStart(2,'0')}</span><div><h3>{j.title}</h3><p className="fm-job-company">{j.company}</p><p className="fm-job-copy">{j.description}</p>{j.highlight&&<p className="fm-job-proof">{j.highlight}</p>}</div><small>{j.period}</small></article>)}</div><div className="fm-resume-prompt"><a href="/resume" className="fm-inline-link">View full résumé · Print or save as PDF ↗</a></div></div></section>}
 function Projects(){
   return <section id="projects" className="fm-section fm-section-lined">
     <span id="work" className="fm-anchor" aria-hidden="true"/>
     <div className="fm-container">
-      <Title label="03 / SELECTED WORK" title="The thinking behind the shipping" subtitle="A private AI research system, production engineering work and independent products. Explore the challenge, decisions, evidence and honest limitations."/>
+      <Title label="03 / SELECTED WORK" title="Selected work" subtitle="A few projects I'm proud of, including what I built, what was difficult and what I'd improve next."/>
       <div className="fm-project-grid">
         {work.map((p,i)=><article key={p.slug} className={p.slug==='evidence-driven-ai-workflows'?'fm-project fm-project-featured':'fm-project'}>
           <a href={'/work/'+p.slug} className="fm-project-top"><span>{String(i+1).padStart(2,'0')} / {p.category}</span><span>↗</span></a>
           <div className="fm-project-main">
-            <span className="fm-project-status">{p.statusLabel}</span>{p.slug==='evidence-driven-ai-workflows'&&<span className="fm-project-spotlight">FEATURED ENGINEERING RESEARCH</span>}
+            <span className="fm-project-status">{p.statusLabel}</span>{p.slug==='evidence-driven-ai-workflows'&&<span className="fm-project-spotlight">MY AI ENGINEERING PROJECT</span>}
             <h3><a href={'/work/'+p.slug}>{p.title}</a></h3>
             <p>{p.summary}</p>
           </div>
           <div className="fm-chips">{p.tags.slice(0,5).map(t=><span key={t}>{t}</span>)}</div>
-          <a className="fm-project-detail-link" href={'/work/'+p.slug}>Explore case study →</a>
+          <a className="fm-project-detail-link" href={'/work/'+p.slug}>Read the story →</a>
         </article>)}
       </div>
       <details className="fm-archive">
-        <summary>Earlier projects <span>{archived.length} projects · optional archive</span></summary>
-        <p className="fm-archive-desc">These older experiments helped me learn. They're preserved as history rather than presented as recent production work.</p>
+        <summary>Earlier projects <span>{archived.length} projects</span></summary>
+        <p className="fm-archive-desc">These are some of the projects I built while learning and finding my feet.</p>
         <div className="fm-archive-grid">{archived.map(p=>
           <article key={p.slug}><div><h3><a href={'/work/'+p.slug}>{p.title} ↗</a></h3><p>{p.summary}</p></div><a href={'/work/'+p.slug}>Read more →</a></article>
         )}</div>
@@ -69,13 +69,13 @@ function Projects(){
 }
 function Skills(){
   return <section id="skills" className="fm-section fm-section-lined"><div className="fm-container">
-    <Title label="04 / TOOLKIT" title="The right tools for the outcome" subtitle="Real production experience across APIs, web and mobile apps, data and delivery."/>
+    <Title label="04 / TOOLKIT" title="What I work with" subtitle="Tools I use to build, ship and fix products."/>
     <div className="fm-skills">{skills.map(g=><div key={g.id} className="fm-skill-row"><h3>{g.title}</h3><div>{g.values.map(v=><span key={v}>{v}</span>)}</div></div>)}</div>
   </div></section>;
 }
 function Services(){
   return <section id="services" className="fm-section fm-section-lined"><div className="fm-container">
-    <Title label="05 / HOW I CAN HELP" title="Build it, improve it, keep it running" subtitle="Ways I help companies and independent clients move from a business problem to dependable software."/>
+    <Title label="05 / HOW I CAN HELP" title="What I can help you build" subtitle="From the first version to the problems that show up in production."/>
     <div className="fm-services">{services.map(s=><article key={s.id}><h3>{s.title}</h3><p>{s.detail}</p></article>)}</div>
   </div></section>;
 }
@@ -98,10 +98,10 @@ function Detail({slug}){
     {p?<>
       <span className="fm-kicker">{p.category} · {p.statusLabel||'Earlier work'}</span>
       <h1>{p.title}</h1><p className="fm-detail-lead">{p.summary}</p>
-      {[['The challenge',p.context],['What I contributed',p.contribution],['What changed',p.outcome],['What I learned',p.lessons]]
+      {[['The problem',p.context],['What I built',p.contribution],['What came out of it',p.outcome],['What I learned',p.lessons]]
         .filter(([,description])=>description).map(([title,description])=>
           <section key={title}><h2>{title}</h2><p>{description}</p></section>)}
-      {p.slug==='evidence-driven-ai-workflows'&&<section className="fm-detail-ai-evidence" aria-labelledby="ai-evidence-heading"><span className="fm-kicker"><b>PROOF / NOT A SALES CLAIM</b></span><h2 id="ai-evidence-heading">What the evidence actually shows</h2><p>{aiLab.disclaimer}</p><div className="fm-detail-proof-grid">{aiCaseEvidence.map(item=><article key={item.label}><span>{item.level}</span><h3>{item.finding}</h3><p>{item.detail}</p></article>)}</div><a className="fm-inline-link" href="/#ai-lab">Explore the interactive method ↗</a></section>}
+      {p.slug==='evidence-driven-ai-workflows'&&<section className="fm-detail-ai-evidence" aria-labelledby="ai-evidence-heading"><span className="fm-kicker"><b>FROM MY OWN TESTING</b></span><h2 id="ai-evidence-heading">A closer look</h2><p>{aiLab.disclaimer}</p><div className="fm-detail-proof-grid">{aiCaseEvidence.map(item=><article key={item.label}><span>{item.level}</span><h3>{item.finding}</h3><p>{item.detail}</p></article>)}</div><a className="fm-inline-link" href="/#ai-lab">Try the walkthrough ↗</a></section>}
       <section><h2>Technologies and methods</h2><div className="fm-chips">{p.tags.map(t=><span key={t}>{t}</span>)}</div></section>
       {p.evidenceNote&&<p className="fm-evidence-note">{p.evidenceNote}</p>}
       {p.repositoryUrl&&<External href={p.repositoryUrl}>View public repository ↗</External>}
