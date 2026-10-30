@@ -13,6 +13,22 @@ Inspect existing source, live product behavior and proven design/CMS patterns; c
 ## Verified source
 Enyina/newPortfolio powers enyina.netlify.app per owner. This repository is React/Create React App, not Vinext/D1/R2. Build on it rather than a replacement repository.
 
+
+## Public writing must sound human
+
+The portfolio is written in my own voice, not as an automated audit of my career.
+- Write in natural, direct first person when speaking about my work: what I built, why, what was hard, and what actually happened.
+- Never display internal provenance labels such as "owner-reported", "owner-described", "according to the résumé", "human_review_required", or "independently verified" as visitor-facing copy. Keep qualifications and provenance in private engineering/evidence documentation when possible.
+- Keep claims factual. If a number is not ready for public use, omit it instead of surrounding it with awkward credibility disclaimers.
+- Do not exaggerate AI capabilities, auto-learning, safety guarantees or results; plain caveats are fine when they prevent a real misunderstanding.
+- Prefer short headings, concrete verbs and personal observations over inflated marketing slogans or repeated rhetorical patterns.
+- Review every published screen's copy aloud, including résumé, case-study notes, captions, labels, empty/error states and social previews.
+- Do not publish private AI source, private evaluations/traces, real workplace security details or patient/customer information.
+
+## World-class quality gate
+
+The source-backed, prioritized acceptance plan is `docs/PORTFOLIO-WORLD-CLASS-QUALITY-PLAN.md`. Aim for a distinctive, fast, accessible, visually evidenced portfolio. A high editorial rating is not a passed accessibility/performance audit. Track what is measured, what remains a hypothesis, and what requires permission. Do not copy proprietary layouts/assets from reference portfolios.
+
 ## Public data and design
 Only published, visible content ships to anonymous browser clients. Never embed draft records, API keys, user secrets or private media in the frontend bundle. Keep mobile layouts, semantic HTML, keyboard operation, focus visibility and reduced-motion behavior.
 
