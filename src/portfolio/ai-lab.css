@@ -76,3 +76,31 @@
 .ai-lab-bars>p{font-size:10px;color:#9da0a4;line-height:1.65;margin-top:1px}
 @media(max-width:850px){.ai-lab-measure{grid-template-columns:1fr;gap:27px}}
 @media(max-width:600px){.ai-lab-measure{padding:24px 20px}.ai-lab-bar-row>div:first-child{flex-wrap:wrap}}
+
+
+/* Readable, deliberately simple labels beat a decorative micro-type interface. */
+.ai-lab-intro>div>p{font-size:16px;line-height:1.8}
+.ai-lab-intro-actions>span,.ai-lab-identity small{font-size:12px}
+.ai-lab-identity-top{font-size:11px}
+.ai-lab-signal>span{font-size:14px}
+.ai-lab-signal p{font-size:12px}
+.ai-lab-workbench-head h3{font-size:clamp(23px,3vw,31px)}
+.ai-lab-demo-indicator{font-size:12px}
+.ai-lab-option{min-height:52px}
+.ai-lab-option strong{font-size:13px}
+.ai-lab-option span{font-size:12px}
+.ai-lab-demo-menu>p,.ai-lab-screen-top{font-size:12px}
+.ai-lab-question{font-size:clamp(19px,2.25vw,25px)}
+.ai-lab-flow-step strong{font-size:14px}
+.ai-lab-flow-step p{font-size:13px}
+.ai-lab-verdict div span{font-size:11px}
+.ai-lab-verdict div strong{font-size:14px}
+.ai-lab-verdict p{font-size:13px}
+.ai-lab-measure-description>p{font-size:14px}
+.ai-lab-measure-status{font-size:12px}
+.ai-lab-bars>p,.ai-lab-bottom p{font-size:12px}
+.ai-lab-bottom a{font-size:13px;white-space:normal}
+@media(max-width:660px){
+  .ai-lab-option{min-height:52px}
+  .ai-lab-intro h2{line-height:1.15}
+}
