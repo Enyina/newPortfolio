@@ -2,11 +2,13 @@ import {useState} from 'react';
 import {site,experience,skills,services,getFeaturedProjects,getArchiveProjects,getVisibleSections,findProject,resolveRoute,safeExternal} from './content.mjs';
 import './figma-layout.css';
 import ResumePage from './ResumePage';
+import AIEvidenceLab from './AIEvidenceLab';
+import {aiCaseEvidence, aiLab} from './aiProof.mjs';
 
 const work=getFeaturedProjects();
 const archived=getArchiveProjects();
 const visibleIds=new Set(getVisibleSections().map(section=>section.id));
-const links=[['About','about'],['Experience','experience'],['Projects','projects'],['Skills','skills'],['Contact','contact'],['Résumé','resume']].filter(([,id])=>id==='resume'||visibleIds.has(id==='projects'?'work':id));
+const links=[['AI Lab','ai-lab'],['About','about'],['Experience','experience'],['Projects','projects'],['Skills','skills'],['Contact','contact'],['Résumé','resume']].filter(([,id])=>id==='ai-lab'||id==='resume'||visibleIds.has(id==='projects'?'work':id));
 function External({href,children}){const url=safeExternal(href);return url?<a href={url} target="_blank" rel="noopener noreferrer">{children}</a>:null}
 function Header(){const [open,setOpen]=useState(false);return <header className="fm-header"><div className="fm-container fm-header-inner"><a href="/" className="fm-brand">M<span>.</span></a><button className="fm-menu" type="button" aria-expanded={open} aria-label="Toggle navigation" onClick={()=>setOpen(!open)}>☰</button><nav aria-label="Primary navigation" className={open?'fm-nav fm-nav-open':'fm-nav'}>{links.map(([name,id])=><a key={id} href={id==='resume'?'/resume':'/#'+id} onClick={()=>setOpen(false)}>{name}</a>)}</nav><a className="fm-header-contact" href={'mailto:'+site.email}>Let's talk ↗</a></div></header>}
 function Title({label,title,subtitle}){
@@ -23,30 +25,31 @@ function Hero(){
       <div className="fm-hero-content">
         <span className="fm-hero-pill"><i/> Senior Full-Stack Product Engineer · Open to remote opportunities</span>
         <h1 id="hero-title">Matthew Enyina</h1>
-        <p>Building reliable products, complex integrations and real-world systems — from idea to production</p>
+        <p>I build products that work in the real world—and engineering systems that challenge assumptions, test AI decisions, and make complex software safer to ship.</p>
         <div className="fm-hero-actions">
-          <a className="fm-button fm-button-primary" href="#projects">View Work ↗</a>
+          <a className="fm-button fm-button-primary" href="#ai-lab">Explore my AI engineering lab ↗</a>
+          <a className="fm-button fm-button-quiet" href="#projects">Selected work</a>
           <a className="fm-button fm-button-quiet" href={'mailto:'+site.email}>Get in Touch</a>
           <a className="fm-button fm-button-quiet" href="/resume">View résumé ↗</a>
         </div>
-        <div className="fm-hero-foot">Node.js <span>·</span> TypeScript <span>·</span> React Native <span>·</span> Payments <span>·</span> AI</div>
+        <div className="fm-hero-foot">Product engineering <span>·</span> AI systems <span>·</span> Reliability <span>·</span> End-to-end delivery</div>
       </div>
     </div>
   </section>;
 }
-function Stats(){const stats=[['6+ years','Production engineering · CV'],['Full-stack','Web, mobile and APIs'],['Real-time','Requests, events and workflows'],['Independent','Building and learning in public']];return <section className="fm-stats" aria-label="Areas of expertise"><div className="fm-container fm-stats-grid">{stats.map(([a,b])=><div key={a}><strong>{a}</strong><span>{b}</span></div>)}</div></section>}
+function Stats(){const stats=[['6+ years','Engineering experience · résumé'],['AI systems','Private research & real-agent evaluation'],['Full-stack','Web, mobile, APIs and infrastructure'],['Evidence-first','Test assumptions before making claims']];return <section className="fm-stats" aria-label="Areas of expertise"><div className="fm-container fm-stats-grid">{stats.map(([a,b])=><div key={a}><strong>{a}</strong><span>{b}</span></div>)}</div></section>}
 function About(){return <section id="about" className="fm-section fm-about"><div className="fm-container fm-about-grid"><div><span className="fm-kicker"><b>01</b> / ABOUT</span><h2>I solve the problem <em>behind</em> the problem.</h2></div><div><p>{site.about}</p><p>I bring product thinking into engineering decisions, from understanding what customers need to keeping critical operations reliable after launch.</p><a href="#contact" className="fm-inline-link">Let's work together ↗</a></div></div></section>}
 function Experience(){return <section id="experience" className="fm-section"><div className="fm-container"><Title label="02 / EXPERIENCE" title="Where I've made an impact" subtitle="Building useful products, integrating systems, and improving production reliability."/><div className="fm-timeline">{experience.map((j,i)=><article className="fm-job" key={j.id}><span className="fm-job-index">{String(i+1).padStart(2,'0')}</span><div><h3>{j.title}</h3><p className="fm-job-company">{j.company}</p><p className="fm-job-copy">{j.description}</p>{j.highlight&&<p className="fm-job-proof">{j.highlight}</p>}</div><small>{j.period}</small></article>)}</div><div className="fm-resume-prompt"><a href="/resume" className="fm-inline-link">View full résumé · Print or save as PDF ↗</a></div></div></section>}
 function Projects(){
   return <section id="projects" className="fm-section fm-section-lined">
     <span id="work" className="fm-anchor" aria-hidden="true"/>
     <div className="fm-container">
-      <Title label="03 / SELECTED WORK" title="What I've built, improved and learned" subtitle="Recent production problem-solving and independent products. Each case study explains the problem, my contribution and its limits."/>
+      <Title label="03 / SELECTED WORK" title="The thinking behind the shipping" subtitle="A private AI research system, production engineering work and independent products. Explore the challenge, decisions, evidence and honest limitations."/>
       <div className="fm-project-grid">
-        {work.map((p,i)=><article key={p.slug} className="fm-project">
+        {work.map((p,i)=><article key={p.slug} className={p.slug==='evidence-driven-ai-workflows'?'fm-project fm-project-featured':'fm-project'}>
           <a href={'/work/'+p.slug} className="fm-project-top"><span>{String(i+1).padStart(2,'0')} / {p.category}</span><span>↗</span></a>
           <div className="fm-project-main">
-            <span className="fm-project-status">{p.statusLabel}</span>
+            <span className="fm-project-status">{p.statusLabel}</span>{p.slug==='evidence-driven-ai-workflows'&&<span className="fm-project-spotlight">FEATURED ENGINEERING RESEARCH</span>}
             <h3><a href={'/work/'+p.slug}>{p.title}</a></h3>
             <p>{p.summary}</p>
           </div>
@@ -98,6 +101,7 @@ function Detail({slug}){
       {[['The challenge',p.context],['What I contributed',p.contribution],['What changed',p.outcome],['What I learned',p.lessons]]
         .filter(([,description])=>description).map(([title,description])=>
           <section key={title}><h2>{title}</h2><p>{description}</p></section>)}
+      {p.slug==='evidence-driven-ai-workflows'&&<section className="fm-detail-ai-evidence" aria-labelledby="ai-evidence-heading"><span className="fm-kicker"><b>PROOF / NOT A SALES CLAIM</b></span><h2 id="ai-evidence-heading">What the evidence actually shows</h2><p>{aiLab.disclaimer}</p><div className="fm-detail-proof-grid">{aiCaseEvidence.map(item=><article key={item.label}><span>{item.level}</span><h3>{item.finding}</h3><p>{item.detail}</p></article>)}</div><a className="fm-inline-link" href="/#ai-lab">Explore the interactive method ↗</a></section>}
       <section><h2>Technologies and methods</h2><div className="fm-chips">{p.tags.map(t=><span key={t}>{t}</span>)}</div></section>
       {p.evidenceNote&&<p className="fm-evidence-note">{p.evidenceNote}</p>}
       {p.repositoryUrl&&<External href={p.repositoryUrl}>View public repository ↗</External>}
@@ -105,4 +109,4 @@ function Detail({slug}){
   </main>;
 }
 const renderedSections={about:About,experience:Experience,work:Projects,skills:Skills,services:Services,contact:Contact};
-export default function FigmaPortfolio(){const route=resolveRoute(window.location.pathname);return <div className="fm-page"><a href="#main-content" className="fm-skip">Skip to content</a><Header/>{route.kind==='home'?<main id="main-content"><Hero/><Stats/>{getVisibleSections().map(({id})=>{const Section=renderedSections[id];return Section?<Section key={id}/>:null})}</main> : route.kind==='resume'?<ResumePage/>:<Detail slug={route.kind==='project'?route.slug:null}/>}<footer className="fm-footer"><div className="fm-container"><span>Matthew Enyina</span><span>Built with care, designed to evolve.</span><span>© {new Date().getFullYear()}</span></div></footer></div>}
+export default function FigmaPortfolio(){const route=resolveRoute(window.location.pathname);return <div className="fm-page"><a href="#main-content" className="fm-skip">Skip to content</a><Header/>{route.kind==='home'?<main id="main-content"><Hero/><Stats/><AIEvidenceLab/>{getVisibleSections().map(({id})=>{const Section=renderedSections[id];return Section?<Section key={id}/>:null})}</main> : route.kind==='resume'?<ResumePage/>:<Detail slug={route.kind==='project'?route.slug:null}/>}<footer className="fm-footer"><div className="fm-container"><span>Matthew Enyina</span><span>Built with care, designed to evolve.</span><span>© {new Date().getFullYear()}</span></div></footer></div>}
