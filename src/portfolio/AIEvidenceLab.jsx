@@ -13,19 +13,19 @@ export default function AIEvidenceLab() {
           <h2 id="ai-lab-heading">{aiLab.title}</h2>
           <p>{aiLab.intro}</p>
           <div className="ai-lab-intro-actions">
-            <a className="fm-button fm-button-primary" href="/work/evidence-driven-ai-workflows">Explore the full case study ↗</a>
-            <span>Private source. Public reasoning.</span>
+            <a className="fm-button fm-button-primary" href="/work/evidence-driven-ai-workflows">See how I built it ↗</a>
+            <span>The code is private. The thinking isn't.</span>
           </div>
         </div>
         <div className="ai-lab-identity" aria-label="A four-stage, review-gated engineering process">
-          <span className="ai-lab-identity-top">ENGINEERING / LEARNING SYSTEM <span>v.2026</span></span>
+          <span className="ai-lab-identity-top">BUILT IN MY SPARE TIME <span>v.2026</span></span>
           <div className="ai-lab-orbit" aria-hidden="true"><span>?</span><i/><i/><i/></div>
           <strong>OBSERVE <span>→</span> VERIFY <span>→</span> DECIDE</strong>
-          <small>Nothing becomes a rule because a model sounds confident.</small>
+          <small>I don't trust a result just because it sounds convincing.</small>
         </div>
       </div>
 
-      <div className="ai-lab-signals" aria-label="Recorded engineering evidence">
+      <div className="ai-lab-signals" aria-label="A few numbers from the project">
         {aiLab.signals.map(signal => <div className="ai-lab-signal" key={signal.label}>
           <strong>{signal.value}</strong>
           <span>{signal.label}</span>
@@ -33,26 +33,26 @@ export default function AIEvidenceLab() {
         </div>)}
       </div>
 
-      <div className="ai-lab-measure" aria-label="One matched real Codex evaluation, not a verified improvement">
+      <div className="ai-lab-measure" aria-label="A closer look at a Codex experiment">
         <div className="ai-lab-measure-description">
-          <span className="fm-kicker"><b>REAL EXPERIMENT / OCT 2026</b></span>
-          <h3>A higher score. A better question.</h3>
-          <p>Codex completed a paired evaluation of a proposed writing skill. The phrase checks improved, but reviewing the real responses exposed lost context. I kept the change unapproved.</p>
-          <span className="ai-lab-measure-status">Verdict: inconclusive — candidate not promoted</span>
+          <span className="fm-kicker"><b>A REAL CODEX TEST</b></span>
+          <h3>The score went up. I still said no.</h3>
+          <p>I tried a new writing skill on the same 15 tasks. It passed more checks, but when I read the answers, one was actually less clear. So I didn't add the skill to my system.</p>
+          <span className="ai-lab-measure-status">Still testing. Not approved.</span>
         </div>
-        <div className="ai-lab-bars" aria-label="Phrase-check results in one 15-case comparison">
-          <div className="ai-lab-bar-row"><div><strong>Without skill</strong><span>9 / 15</span></div><div className="ai-lab-bar-track"><span style={{width:'60%'}}/></div></div>
-          <div className="ai-lab-bar-row ai-lab-bar-row-candidate"><div><strong>With candidate</strong><span>11 / 15</span></div><div className="ai-lab-bar-track"><span style={{width:'73.333%'}}/></div></div>
-          <p>Phrase-matching preflight only. Neither bar establishes true task quality, safety or repeatable improvement.</p>
+        <div className="ai-lab-bars" aria-label="Results from one 15-task writing experiment">
+          <div className="ai-lab-bar-row"><div><strong>Before</strong><span>9 / 15</span></div><div className="ai-lab-bar-track"><span style={{width:'60%'}}/></div></div>
+          <div className="ai-lab-bar-row ai-lab-bar-row-candidate"><div><strong>With my new skill</strong><span>11 / 15</span></div><div className="ai-lab-bar-track"><span style={{width:'73.333%'}}/></div></div>
+          <p>These bars count matching phrases. They don't tell the whole story.</p>
         </div>
       </div>
       <div className="ai-lab-workbench">
         <div className="ai-lab-workbench-head">
           <div>
-            <span className="fm-kicker"><b>INTERACTIVE EXPLAINER</b> / SYNTHETIC EXAMPLES</span>
-            <h3>See how I designed it to think.</h3>
+            <span className="fm-kicker"><b>HOW IT WORKS</b> / FOUR EXAMPLES</span>
+            <h3>What happens when things get messy?</h3>
           </div>
-          <span className="ai-lab-demo-indicator"><span/> No live agent connected</span>
+          <span className="ai-lab-demo-indicator"><span/> Example walkthrough</span>
         </div>
         <div className="ai-lab-demo-layout">
           <div className="ai-lab-demo-menu" role="group" aria-label="Choose an engineering scenario">
@@ -66,10 +66,10 @@ export default function AIEvidenceLab() {
                 <strong>{item.label}</strong>
                 <span aria-hidden="true">↗</span>
               </button>)}
-            <p>Switch scenarios to explore the decision process. These are illustrations, not executed requests.</p>
+            <p>Pick a situation to see how I'd approach it.</p>
           </div>
           <div className="ai-lab-demo-screen" aria-live="polite" aria-atomic="true">
-            <div className="ai-lab-screen-top"><span><i/> CASE / {scenario.eyebrow}</span><span>READ-ONLY DEMO</span></div>
+            <div className="ai-lab-screen-top"><span><i/> {scenario.eyebrow}</span><span>EXAMPLE</span></div>
             <p className="ai-lab-question">“{scenario.question}”</p>
             <div className="ai-lab-flow" aria-label="Decision sequence">
               {scenario.stages.map((step, index) => <div className="ai-lab-flow-step" key={step.name}>
@@ -78,7 +78,7 @@ export default function AIEvidenceLab() {
               </div>)}
             </div>
             <div className="ai-lab-verdict">
-              <div><span>DECISION GATE</span><strong>{scenario.verdict}</strong></div>
+              <div><span>WHAT I'D DO</span><strong>{scenario.verdict}</strong></div>
               <p>{scenario.outcome}</p>
             </div>
           </div>
@@ -86,7 +86,7 @@ export default function AIEvidenceLab() {
       </div>
       <div className="ai-lab-bottom">
         <p>{aiLab.disclaimer}</p>
-        <a href="/work/evidence-driven-ai-workflows">Read the engineering decisions and limitations ↗</a>
+        <a href="/work/evidence-driven-ai-workflows">Read the full story ↗</a>
       </div>
     </div>
   </section>;
