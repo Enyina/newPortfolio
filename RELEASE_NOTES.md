@@ -1,5 +1,22 @@
 # What's new on the portfolio
 
+## October 30, 2026 — More of my own voice
+
+**What changed**
+
+I rewrote the work descriptions, project stories and résumé so they sound like me talking about what I built. I removed awkward phrases such as “Owner-reported in résumé” from the website. I also made the small text easier to read, particularly on phones, and improved the size of navigation and other controls.
+
+I've reviewed the website against stronger portfolio examples and published a practical list of what still needs work: real project visuals, more focused case studies, accessibility checks, faster loading and a proper live-site review.
+
+**Why it matters**
+
+Someone visiting the site should feel like they're meeting a person who builds things—not reading a report generated about him.
+
+**What to know**
+
+The new writing and layout changes are in the website's source. Live publishing, real-device checking and independent accessibility/performance measurements are still to be confirmed.
+
+
 ## October 30, 2026 — My AI engineering work is easier to see
 
 **What changed**
