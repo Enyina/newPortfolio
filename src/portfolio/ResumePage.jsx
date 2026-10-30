@@ -8,10 +8,10 @@ const education = {
 };
 
 const workHighlights = [
-  'Delivered features across React/Expo clients, Node.js and TypeScript APIs, MongoDB/Prisma data models, integrations and operational workflows.',
-  'Improved API performance through query optimization and geospatial indexing; my October résumé reports an approximately 70% reduction in response time.',
-  'Built real-time and voice-assisted workflows, with reviewable structured data rather than blind automation.',
-  'Worked on transaction-sensitive payment handling, idempotency, operational recovery, bulk imports and CRM integrations.',
+  'Built features across web and mobile apps, backend APIs, databases and the systems used to run day-to-day operations.',
+  'Improved API response times by optimizing queries and geospatial indexes.',
+  'Worked on real-time order updates and a voice-assisted flow that lets people check what the system understood.',
+  'Built and debugged payments, wallet flows, imports and third-party integrations, with extra attention to safe retries and recovery.',
 ];
 
 export default function ResumePage() {
@@ -25,7 +25,7 @@ export default function ResumePage() {
       </button>
     </div>
     <header className="resume-page__heading">
-      <p className="resume-page__eyebrow">Public résumé · Updated October 2026</p>
+      <p className="resume-page__eyebrow">Résumé · October 2026</p>
       <h1>{site.name}</h1>
       <p className="resume-page__role">{site.title} · Node.js / TypeScript / React</p>
       <p className="resume-page__meta">Lagos, Nigeria · Open to remote roles and consulting</p>
@@ -64,6 +64,6 @@ export default function ResumePage() {
       <h2 id="resume-education">Education</h2>
       <p><strong>{education.degree}</strong> · {education.school} · {education.period}</p>
     </section>
-    <p className="resume-page__footnote">This is the public, contact-safe version of my career summary. Specific impact figures reflect my self-reported résumé, not independent third-party measurements.</p>
+    <p className="resume-page__footnote">A short version of my background and the work I do. I can walk you through individual projects and my role in them during a conversation.</p>
   </main>;
 }
