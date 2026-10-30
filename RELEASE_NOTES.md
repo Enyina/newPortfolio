@@ -1,5 +1,22 @@
 # What's new on the portfolio
 
+## October 30, 2026 — My AI engineering work is easier to see
+
+**What changed**
+
+The homepage now places my independent AI engineering system front and center. Visitors can explore a visual, four-scenario demonstration of how I investigate engineering problems, question AI recommendations, protect permission boundaries, and plan for recovery. The experience includes a real comparison from my personal Codex experiments and explains why a higher score was not enough to approve a change.
+
+My recent work is now introduced with clearer, more confident language. The full case study, mobile layouts, project cards and share previews give visitors a stronger understanding of how I approach difficult engineering challenges.
+
+**Why it matters**
+
+A recruiter, collaborator or client can see how I think, what I built, and what I can prove—without needing access to private code. The demonstration makes complex technical work understandable without overselling experiments.
+
+**What to know**
+
+The interactive examples do not connect to a live AI assistant. The private source remains private, the improvement study is inconclusive, and some approvals and recovery checks still need to be demonstrated. New automated checks are included, but publication on the live site must be independently verified.
+
+
 ## October 17, 2026 — A face behind the work
 
 **What changed**
