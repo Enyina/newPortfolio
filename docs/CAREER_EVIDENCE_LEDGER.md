@@ -70,3 +70,24 @@ The chosen balance is a testable hypothesis, not a proved higher-conversion layo
 ## Project approval rule
 
 Existing project selection and current strengthening were approved for this iteration. For future new project removal, reordering that changes meaning, private-source revelation, and newly quantified employer impacts, present a precise review proposal and obtain confirmation before publication. Ordinary styling, accuracy fixes and tests remain eligible for the owner's direct-main workflow.
+
+
+## October 30, 2026 — Private AI engineering system: what can be shown
+
+**Public source policy:** The repository for the personal AI engineering system is private. The portfolio may describe the owner's generalized architecture and public-safe experimental observations. It must not publish private source files, repository URLs, auth identities, model thread IDs, local private trace paths, employer content, credentials or internal operational data.
+
+| Statement | Direct evidence | Status / website treatment |
+|---|---|---|
+| Evidence-first and reverse-engineering rules, scoped personal hierarchy, source catalog, tool-assisted proposals | Owner-accessible personal repo and merged foundations | Describe implementation at the architectural level, not as an autonomous trained model |
+| Codex baseline and candidate under one fixed 15-case synthetic suite | Local run report dated Oct 30 in personal repo; raw outputs kept local | One real paired experiment. Requested model/CLI recorded; backend snapshot and currency costs unavailable |
+| 9/15 baseline versus 11/15 candidate phrase checks | Same run report | Phrase-level improvement only. Human review found a quality regression in wording; overall outcome **inconclusive** |
+| 323 local software tests passed | Owner's local Codex continuation log | Report as *local tests reported passing*, not an independent security audit or model-quality proof |
+| 22 canonical proposed MCP engineering skills | Draft personal proposal registry | Proposed only, with overlaps excluded from automatic selection; not proven or activated |
+| Approval, monitoring, rollout and rollback lifecycle | Issue #47 acceptance criteria | **Incomplete end-to-end**. Never imply a successfully deployed self-improving AI system |
+| Interactive portfolio explainer | Public React UI and synthetic static scenarios | A selectable educational visualization, **not** a connected live agent or a replay of private data |
+
+**Editorial positioning:** Lead with the unusual engineering judgment: the owner built an evaluation system capable of surfacing why a higher score was insufficient. Strong language is appropriate for the *complexity tackled* and *methods built*, but never manufacture a 10× gain, automatically verified self-learning, independently audited safety or live customer adoption.
+
+**UX rationale:** The hybrid editorial/proof-first alternative from the personal design research is applied to this portfolio. Visitors encounter a memorable hero, then evidence, an interactive scenario-based explanation, and a standalone deep-dive. Typography and amber/dark visual identity remain recognizable; keyboard access, semantic buttons, mobile stacking and reduced-motion preferences are required.
+
+**Before claiming live:** Verify CI production build, served `/release.json`, home and direct case-study routes, navigation on a narrow phone and desktop, keyboard operation, contact journey, and accessible states. Do not assert Netlify published the new revision merely because GitHub main contains it.
