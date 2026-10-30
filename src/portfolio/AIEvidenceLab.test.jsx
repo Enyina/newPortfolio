@@ -1,3 +1,4 @@
+import '@testing-library/jest-dom';
 import {render, screen, fireEvent, within} from '@testing-library/react';
 import AIEvidenceLab from './AIEvidenceLab';
 import {aiLab, labScenarios} from './aiProof.mjs';
