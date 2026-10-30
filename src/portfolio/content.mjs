@@ -6,10 +6,10 @@
  */
 export const site = {
   name: 'Matthew Enyina',
-  title: 'Senior Full-Stack Product Engineer',
+  title: 'Senior Full-Stack Product Engineer & Independent AI Systems Builder',
   email: 'enyina3848@gmail.com',
-  intro: 'I take complex product problems from discovery to dependable production software — APIs, payments, real-time systems and the interfaces people actually use.',
-  about: 'I am a Lagos-based full-stack product engineer with 6+ years of experience across healthcare, logistics, SaaS and property technology. I work across Node.js and TypeScript APIs, React and React Native, databases, integrations, deployment and production debugging. I focus on what a product needs to accomplish, how it can fail, and what happens after it ships.',
+  intro: 'I engineer dependable products—and build evidence-driven AI systems that question their own assumptions before they change the way we work.',
+  about: 'I am a Lagos-based full-stack product engineer with 6+ years of experience across healthcare, logistics, SaaS and property technology. I work across Node.js and TypeScript APIs, React and React Native, integrations, data and production reliability. Alongside that work, I built a private AI engineering system to investigate with evidence, evaluate real agents, separate trust boundaries and refuse premature automation. I care about what works, why it works and how to recover when it does not.',
   location: 'Lagos, Nigeria · Remote worldwide',
   github: 'https://github.com/Enyina',
   linkedin: 'https://www.linkedin.com/in/enyina-matthew/',
@@ -57,13 +57,15 @@ export const skills = [
   { id: 'backend', title: 'Backend & APIs', values: ['Node.js', 'TypeScript', 'Express', 'NestJS', 'REST APIs', 'WebSockets', 'Socket.IO'] },
   { id: 'frontend', title: 'Frontend & mobile', values: ['React', 'React Native', 'Expo', 'Tailwind', 'TanStack Query', 'Zustand'] },
   { id: 'data', title: 'Data & reliability', values: ['MongoDB', 'PostgreSQL', 'MySQL', 'Prisma', 'Redis', 'Idempotency', 'Testing'] },
-  { id: 'delivery', title: 'Cloud, integrations & AI', values: ['DigitalOcean', 'Docker', 'GitHub Actions', 'CI/CD', 'Payments', 'CRM', 'AI-assisted engineering'] },
+  { id: 'delivery', title: 'Cloud & integrations', values: ['DigitalOcean', 'Docker', 'GitHub Actions', 'CI/CD', 'Payments', 'CRM'] },
+  { id: 'ai-engineering', title: 'AI systems & evaluation', values: ['Codex', 'MCP tooling', 'Agent evaluation', 'Prompt-injection testing', 'Skill lifecycle gates', 'Trust boundaries', 'Evidence-led research'] },
 ];
 
 export const services = [
   { id: 'product', title: 'Full-stack product delivery', detail: 'Clarify the user problem, build the workflow end to end and support it after launch.' },
   { id: 'apis', title: 'APIs and complex integrations', detail: 'Make third-party services, payments and real-time operations behave predictably.' },
   { id: 'reliability', title: 'Production improvements', detail: 'Find bottlenecks, understand failures and strengthen critical business flows.' },
+  { id: 'ai-systems', title: 'AI engineering and evaluation', detail: 'Build scoped agent workflows, test their decisions against real cases and keep safety and rollback requirements explicit.' },
 ];
 
 export const projects = [
@@ -77,7 +79,7 @@ export const projects = [
     lessons: 'Model who may advance each step, expose stalled work and make asynchronous workflows recoverable.',
     tags: ['Node.js', 'TypeScript', 'React', 'Socket.IO', 'MongoDB'],
     evidenceNote: 'Scope and responsibilities described in the October 2026 résumé and owner project discussions. No internal diagrams or customer information published.',
-    published: true, visible: true, order: 0,
+    published: true, visible: true, order: 1,
   },
   {
     slug: 'payment-payout-reliability', title: 'Designing safer payment and payout workflows',
@@ -89,7 +91,7 @@ export const projects = [
     lessons: 'For irreversible operations, prioritize auditability and verified outcomes over blindly automatic retries.',
     tags: ['Node.js', 'Paystack', 'MongoDB', 'Background processing'],
     evidenceNote: 'Resume and owner-described responsibilities; no private settlement data, internal endpoints or security details.',
-    published: true, visible: true, order: 1,
+    published: true, visible: true, order: 2,
   },
   {
     slug: 'voice-assisted-ordering', title: 'From spoken requests to reviewable orders',
@@ -101,7 +103,7 @@ export const projects = [
     lessons: 'Preserve user control at the boundary between uncertain language understanding and a real-world order.',
     tags: ['React', 'Node.js', 'Voice interaction', 'Structured data'],
     evidenceNote: 'Featured in the October 2026 résumé. No customer recordings, private prompts, patient data or internal source.',
-    published: true, visible: true, order: 2,
+    published: true, visible: true, order: 3,
   },
   {
     slug: 'moatt-studio', title: 'Moatt Studio — clothing concepts on a mannequin',
@@ -114,19 +116,19 @@ export const projects = [
     tags: ['React', '3D UI', 'Product design', 'Testing'],
     repositoryUrl: 'https://github.com/Enyina/moatt',
     evidenceNote: 'Source and explicit limitations in the public Moatt repository, reviewed October 2026.',
-    published: true, visible: true, order: 3,
+    published: true, visible: true, order: 4,
   },
   {
-    slug: 'evidence-driven-ai-workflows', title: 'An evidence-driven AI engineering workflow',
-    category: 'Independent', statusLabel: 'In progress · Private code', placement: 'featured',
-    summary: 'A personal system for evaluating proven approaches, reusing scoped engineering guidance and reviewing lessons before adoption.',
-    context: 'AI-assisted coding can become inconsistent when source claims, company rules and reusable guidance are mixed together without evidence or boundaries.',
-    contribution: 'Developed a personal approach to reverse-engineering first, comparing options, applying project-scoped rules and creating reviewable learning proposals.',
-    outcome: 'A structured private rules and research workflow; some learning pipelines are still planned or partially implemented, not autonomous end-to-end systems.',
-    lessons: 'Useful automation needs provenance, tests, permission boundaries and deliberate promotion of learned rules.',
-    tags: ['AI-assisted development', 'Research', 'Testing', 'Automation'],
-    evidenceNote: 'Summarized only from approved personal project documentation. Private repository and policy contents are not linked or reproduced.',
-    published: true, visible: true, order: 4,
+    slug: 'evidence-driven-ai-workflows', title: 'I built an AI engineering system that questions its own answers',
+    category: 'Independent', statusLabel: 'Private system · Working foundations', placement: 'featured',
+    summary: 'A personal engineering intelligence workspace: evidence-first investigation, reverse engineering, scoped rules, real Codex comparisons, privacy boundaries and approval-gated learning.',
+    context: 'Coding assistants can confidently recommend a change without knowing what actually failed. More prompts and more skills can also create contradictions, cost and dangerous shortcuts. I wanted a system that treats an engineering claim as a hypothesis and demands proof before turning it into guidance.',
+    contribution: 'Designed and implemented a personal rules hierarchy across trusted workspaces, evidence-led investigation and reusable skill proposals. Added read-only research guidance, review gates, deterministic tests, an isolated real-Codex evaluation harness, local execution checkpoints, and a proposed MCP skill selection system that avoids loading unrelated instructions. The system distinguishes model outputs, authenticated owner approval and native activation as separate steps.',
+    outcome: 'On 30 October 2026, a local run reported 323 passing software checks. One matched Codex comparison generated 15 baseline and 15 candidate responses: phrase scores increased from 9 to 11, but human inspection of the actual outputs found the benefit inconclusive. Promotion stayed blocked. Separately, 22 canonical MCP skill candidates and an overlap-reduction plan are under review—not deployed or proven to improve performance.',
+    lessons: 'An impressive-looking score is not the same as a better answer. Good AI engineering means isolating trust domains, measuring real behavior, being willing to reject your own candidate, and retaining the ability to recover. The learning-to-activation cycle still needs end-to-end approval, live monitoring and rollback proof.',
+    tags: ['Codex', 'AI engineering', 'Agent evaluation', 'MCP', 'Testing', 'Developer tooling', 'Privacy'],
+    evidenceNote: 'Public summary of personal engineering work and a documented local Codex run. Private repository, trace identifiers, internal policy content and confidential information are not published. The example interaction is a synthetic explanatory visualization, not a live AI demo.',
+    published: true, visible: true, order: 0,
   },
   {
     slug: 'shop-kego', title: 'Shop@Kego', category: 'Earlier projects', placement: 'archive',
