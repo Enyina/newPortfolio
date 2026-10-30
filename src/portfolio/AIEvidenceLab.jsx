@@ -42,7 +42,7 @@ export default function AIEvidenceLab() {
           <span className="ai-lab-demo-indicator"><span/> No live agent connected</span>
         </div>
         <div className="ai-lab-demo-layout">
-          <div className="ai-lab-demo-menu" aria-label="Choose an engineering scenario">
+          <div className="ai-lab-demo-menu" role="group" aria-label="Choose an engineering scenario">
             {labScenarios.map((item, index) => <button
               type="button"
               key={item.id}
