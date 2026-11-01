@@ -14,14 +14,14 @@ export default function AIEvidenceLab() {
           <p>{aiLab.intro}</p>
           <div className="ai-lab-intro-actions">
             <a className="fm-button fm-button-primary" href="/work/evidence-driven-ai-workflows">See how I built it ↗</a>
-            <span>The code is private. The thinking isn't.</span>
+            <span>A look inside the project.</span>
           </div>
         </div>
         <div className="ai-lab-identity" aria-label="A four-stage, review-gated engineering process">
-          <span className="ai-lab-identity-top">BUILT IN MY SPARE TIME <span>v.2026</span></span>
+          <span className="ai-lab-identity-top">PERSONAL ENGINEERING TOOLS <span>v.2026</span></span>
           <div className="ai-lab-orbit" aria-hidden="true"><span>?</span><i/><i/><i/></div>
-          <strong>OBSERVE <span>→</span> VERIFY <span>→</span> DECIDE</strong>
-          <small>I don't trust a result just because it sounds convincing.</small>
+          <strong>RESEARCH <span>→</span> TEST <span>→</span> LEARN</strong>
+          <small>Built for the problems I keep running into.</small>
         </div>
       </div>
 
@@ -36,21 +36,21 @@ export default function AIEvidenceLab() {
       <div className="ai-lab-measure" aria-label="A closer look at a Codex experiment">
         <div className="ai-lab-measure-description">
           <span className="fm-kicker"><b>A REAL CODEX TEST</b></span>
-          <h3>The score went up. I still said no.</h3>
-          <p>I tried a new writing skill on the same 15 tasks. It passed more checks, but when I read the answers, one was actually less clear. So I didn't add the skill to my system.</p>
-          <span className="ai-lab-measure-status">Still testing. Not approved.</span>
+          <h3>The test score wasn't the whole story.</h3>
+          <p>I ran the same 15 writing tasks with and without a new skill. It scored better on phrase matching, but a closer read showed one response had lost useful context. I'm still testing it.</p>
+          <span className="ai-lab-measure-status">Writing skill still under review</span>
         </div>
         <div className="ai-lab-bars" aria-label="Results from one 15-task writing experiment">
           <div className="ai-lab-bar-row"><div><strong>Before</strong><span>9 / 15</span></div><div className="ai-lab-bar-track"><span style={{width:'60%'}}/></div></div>
           <div className="ai-lab-bar-row ai-lab-bar-row-candidate"><div><strong>With my new skill</strong><span>11 / 15</span></div><div className="ai-lab-bar-track"><span style={{width:'73.333%'}}/></div></div>
-          <p>These bars count matching phrases. They don't tell the whole story.</p>
+          <p>Phrase checks from October 2026, not a measure of overall quality.</p>
         </div>
       </div>
       <div className="ai-lab-workbench">
         <div className="ai-lab-workbench-head">
           <div>
             <span className="fm-kicker"><b>HOW IT WORKS</b> / FOUR EXAMPLES</span>
-            <h3>What happens when things get messy?</h3>
+            <h3>Four situations I built around</h3>
           </div>
           <span className="ai-lab-demo-indicator"><span/> Example walkthrough</span>
         </div>
@@ -66,7 +66,7 @@ export default function AIEvidenceLab() {
                 <strong>{item.label}</strong>
                 <span aria-hidden="true">↗</span>
               </button>)}
-            <p>Pick a situation to see how I'd approach it.</p>
+            <p>Choose a situation to see the steps.</p>
           </div>
           <div className="ai-lab-demo-screen" aria-live="polite" aria-atomic="true">
             <div className="ai-lab-screen-top"><span><i/> {scenario.eyebrow}</span><span>EXAMPLE</span></div>
@@ -86,7 +86,7 @@ export default function AIEvidenceLab() {
       </div>
       <div className="ai-lab-bottom">
         <p>{aiLab.disclaimer}</p>
-        <a href="/work/evidence-driven-ai-workflows">Read the full story ↗</a>
+        <a href="/work/evidence-driven-ai-workflows">Read the project story ↗</a>
       </div>
     </div>
   </section>;
