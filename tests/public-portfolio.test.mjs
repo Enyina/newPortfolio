@@ -28,11 +28,11 @@ test('experience matches the October 2026 public career timeline', () => {
 test('five current case studies are featured; six earlier apps are still in the archive', () => {
   const featured=getFeaturedProjects();
   assert.deepEqual(featured.map(p=>p.slug),[
+    'evidence-driven-ai-workflows',
     'pharmacy-order-orchestration',
     'payment-payout-reliability',
     'voice-assisted-ordering',
-    'moatt-studio',
-    'evidence-driven-ai-workflows'
+    'moatt-studio'
   ]);
   assert.equal(getArchiveProjects().length,6);
   assert.deepEqual(getArchiveProjects().slice(0,2).map(p=>p.slug),['shop-kego','hitours']);
@@ -113,7 +113,8 @@ test('newer private research and employer case studies stay honest about evidenc
   assert.equal(privateProject.repositoryUrl,undefined);
   assert.match(privateProject.statusLabel,/Private/);
   const moatt=findProject('moatt-studio');
-  assert.match(moatt.outcome,/prototype/i);
+  assert.match(moatt.statusLabel,/prototype/i);
+  assert.match(moatt.outcome,/not manufacturing patterns/i);
 });
 
 test('current contact channel is available',()=>{
