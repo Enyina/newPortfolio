@@ -6,10 +6,10 @@
  */
 export const site = {
   name: 'Matthew Enyina',
-  title: 'Full-Stack Product Engineer · AI Systems Builder',
+  title: 'Full-Stack Engineer | AI Tools & Product Engineering',
   email: 'enyina3848@gmail.com',
-  intro: 'I build software that holds up when things get complicated. I also build tools that make AI-assisted engineering more reliable.',
-  about: 'I’m a Lagos-based engineer with 6+ years of experience building products across healthcare, logistics, SaaS and property technology. I work from the interface all the way down to the API, database and deployment. I spend a lot of time on the problems that show up after launch: slow systems, messy integrations, failed payments and hard-to-reproduce bugs. Lately, I’ve also been building my own AI engineering tools, because I want more than code that looks right. I want to know it works.',
+  intro: 'I build web and mobile products, solve the backend problems behind them, and make tools that improve how I work.',
+  about: 'I’m a software engineer based in Lagos. For over six years, I’ve worked across web apps, mobile apps, APIs and the less glamorous things that keep products running. I enjoy untangling difficult bugs, making payment flows reliable and finding better ways to build. My latest personal project is an AI engineering toolkit I use to research problems, test ideas and carry work between coding assistants.',
   location: 'Lagos, Nigeria · Remote worldwide',
   github: 'https://github.com/Enyina',
   linkedin: 'https://www.linkedin.com/in/enyina-matthew/',
@@ -58,14 +58,14 @@ export const skills = [
   { id: 'frontend', title: 'Frontend & mobile', values: ['React', 'React Native', 'Expo', 'Tailwind', 'TanStack Query', 'Zustand'] },
   { id: 'data', title: 'Data & reliability', values: ['MongoDB', 'PostgreSQL', 'MySQL', 'Prisma', 'Redis', 'Idempotency', 'Testing'] },
   { id: 'delivery', title: 'Cloud & integrations', values: ['DigitalOcean', 'Docker', 'GitHub Actions', 'CI/CD', 'Payments', 'CRM'] },
-  { id: 'ai-engineering', title: 'AI systems & evaluation', values: ['Codex', 'MCP tooling', 'Agent evaluation', 'Prompt-injection testing', 'Skill lifecycle gates', 'Trust boundaries', 'Evidence-led research'] },
+  { id: 'ai-engineering', title: 'AI & developer tools', values: ['Codex', 'MCP', 'Agent testing', 'Python', 'CLI tools', 'GitHub Actions', 'Workflow design'] },
 ];
 
 export const services = [
-  { id: 'product', title: 'Full-stack product delivery', detail: 'Clarify the user problem, build the workflow end to end and support it after launch.' },
-  { id: 'apis', title: 'APIs and complex integrations', detail: 'Make third-party services, payments and real-time operations behave predictably.' },
-  { id: 'reliability', title: 'Production improvements', detail: 'Find bottlenecks, understand failures and strengthen critical business flows.' },
-  { id: 'ai-systems', title: 'AI engineering and evaluation', detail: 'Build AI-assisted workflows, test them on real tasks and catch bad suggestions before they become a problem.' },
+  { id: 'product', title: 'Web and mobile products', detail: 'From the first interface to the API and everything it needs to work in production.' },
+  { id: 'apis', title: 'Backends and integrations', detail: 'Payments, real-time updates, third-party APIs and the bugs that come with them.' },
+  { id: 'reliability', title: 'Fixing what breaks', detail: 'Slow requests, unreliable flows, retries and production issues that need proper answers.' },
+  { id: 'ai-systems', title: 'AI tools for engineering', detail: 'Building practical tools around coding agents, testing, research and handoffs between sessions.' },
 ];
 
 export const projects = [
@@ -83,7 +83,7 @@ export const projects = [
   },
   {
     slug: 'payment-payout-reliability', title: 'Making payments safer to retry',
-    category: 'Production', statusLabel: 'Employer case study', placement: 'featured',
+    category: 'Production', statusLabel: 'Work experience', placement: 'featured',
     summary: 'Handling the moments when a payment times out, a callback arrives twice or nobody knows whether a transaction succeeded.',
     context: 'A timeout does not always mean a payment failed. Blindly retrying can create a second problem while trying to solve the first.',
     contribution: 'Worked on payment confirmations, wallet and payout flows, repeat-safe requests and the checks needed to investigate unexpected results.',
@@ -95,7 +95,7 @@ export const projects = [
   },
   {
     slug: 'voice-assisted-ordering', title: 'Turning spoken requests into usable orders',
-    category: 'Production', statusLabel: 'Employer case study', placement: 'featured',
+    category: 'Production', statusLabel: 'Work experience', placement: 'featured',
     summary: 'Helping people place orders in their own words, while giving them a chance to check what the system understood.',
     context: 'People talk naturally. Order forms do not. The difficult part is turning a spoken request into something accurate without taking control away from the customer.',
     contribution: 'Worked on the flow from speech input to structured order details and on the review step before submission.',
@@ -108,26 +108,27 @@ export const projects = [
   {
     slug: 'moatt-studio', title: 'Moatt — designing clothes in the browser',
     category: 'Independent', statusLabel: 'Public prototype', placement: 'featured',
-    summary: 'A personal clothing-design studio for trying out garment shapes, fabrics and artwork before making the real thing.',
-    context: 'Most clothing mockups make it hard to imagine the finished piece. I wanted a faster way to experiment visually.',
-    contribution: 'Built front-and-back design controls, artwork layers and a 3D preview, then kept improving the clothing shape and feel.',
-    outcome: 'A working prototype I can keep testing. The fabric realism and mannequin still need work before it is something I would rely on for production.',
-    lessons: 'If the clothing does not look believable, the number of editing features does not matter.',
+    summary: 'A browser-based clothing studio with front-and-back artwork, a garment-first preview and an optional mannequin.',
+    context: 'I wanted to try a design on a garment, turn it around and inspect the details without jumping between different tools.',
+    contribution: 'Built an editor for artwork, text and garment changes, with front/back previews, close-up inspection, save and export. The garment-only view is now the default; the mannequin remains an option.',
+    outcome: 'The garment-first editor is merged into the public project, with a hosted preview recorded in the project. I’m still improving the silhouette, fabric realism and mannequin. This is for exploring ideas, not manufacturing patterns.',
+    lessons: 'Good inspection tools help, but the garment itself has to look convincing. That is still the biggest design challenge.',
     tags: ['React', '3D UI', 'Product design', 'Testing'],
     repositoryUrl: 'https://github.com/Enyina/moatt',
-    evidenceNote: 'The code is public; the design studio is still a work in progress.',
+    demoUrl: 'https://enyina.github.io/moatt/',
+    evidenceNote: 'Source and release notes are public. The prototype is still being refined; the latest live preview has not been rechecked here.',
     published: true, visible: true, order: 4,
   },
   {
-    slug: 'evidence-driven-ai-workflows', title: 'Building an AI engineering system I can trust',
+    slug: 'evidence-driven-ai-workflows', title: 'My personal AI engineering toolkit',
     category: 'Independent', statusLabel: 'Private project · In progress', placement: 'featured',
-    summary: 'My private toolkit for researching engineering problems, testing AI suggestions and keeping unproven ideas out of the rules I actually use.',
-    context: 'I use AI to build software, but I kept running into the same problem: a convincing answer is not necessarily a correct one. I wanted a way to test what an assistant suggests before making it part of how I work.',
-    contribution: 'Built a personal rule system, research tools, real Codex comparison tests and a review process for new skills. The pieces work together to keep different projects separate, compare an idea against a baseline and stop changes that have not earned approval. I am also working on a smaller, more focused way to load only the MCP skills a task needs.',
-    outcome: 'One local test run passed 323 checks. I also compared 15 Codex answers with and without a proposed skill. The score looked better with the skill, but reading the answers revealed a trade-off I was not happy with. I left it out. The next step is proving that the full approval and rollback process works in a real test environment.',
-    lessons: 'The best part of this project is that it caught a reason not to trust its own score. I would rather keep a good idea in testing than turn a mistake into a rule everyone follows.',
+    summary: 'A collection of tools I built to research engineering problems, test coding assistants and resume work across projects and sessions.',
+    context: 'I use coding assistants a lot, and I kept repeating myself: explaining project rules, checking suggestions and recovering context after switching tools. I started building my own system to make that work less fragile.',
+    contribution: 'Built a rules system that separates personal and work contexts, a research assistant for comparing approaches, a test runner for coding-agent skills and a Git-backed handoff format for Codex and Antigravity. More recently I added an experimental local skill installer, a toolbox for finding relevant resources and setup guidance for using selected skills across ChatGPT conversations. Those last integrations still need hands-on acceptance checks.',
+    outcome: 'The tools can already check project boundaries, generate reviewable suggestions and record task handoffs. One recorded Codex run passed 323 software tests. In a 15-task comparison, a proposed writing skill scored higher on phrase matching but made one answer worse, so I kept it out. The complete automatic learning, approval and rollback cycle is still being tested.',
+    lessons: 'More instructions aren’t always better. The useful part is being able to check the result, pick up where I left off and know when not to use a new rule.',
     tags: ['Codex', 'AI engineering', 'Agent evaluation', 'MCP', 'Testing', 'Developer tooling', 'Privacy'],
-    evidenceNote: 'The walkthrough uses made-up examples. My source code and original test sessions are private.',
+    evidenceNote: 'The interactive walkthrough is illustrative. The code, evaluation traces and unapproved rules stay private.',
     published: true, visible: true, order: 0,
   },
   {
