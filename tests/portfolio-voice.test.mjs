@@ -38,3 +38,19 @@ test('writing and quality expectations remain in project instructions', () => {
   assert.match(plan,/WCAG 2\.2 AA/);
   assert.match(plan,/Core Web Vitals/);
 });
+
+
+test('homepage, walkthrough and resume avoid internal report language', () => {
+  const uiFiles = [
+    'src/portfolio/FigmaPortfolio.jsx',
+    'src/portfolio/AIEvidenceLab.jsx',
+    'src/portfolio/ResumePage.jsx',
+    'public/index.html',
+  ];
+  for (const path of uiFiles) {
+    const source = readFileSync(new URL('../' + path, import.meta.url), 'utf8');
+    assert.doesNotMatch(source,
+      /Owner-reported|Owner-described|self-reported|independently verified|AI-powered genius|10x better|the thinking behind the shipping|candidate not promoted|claim provenance/i,
+      path + ' should read like a human portfolio, not an internal review');
+  }
+});
