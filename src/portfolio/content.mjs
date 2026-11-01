@@ -29,7 +29,7 @@ export const experience = [
   {
     id: 'famasi', title: 'Senior Full-Stack Product Engineer', company: 'Famasi Africa',
     period: 'Jun 2024 — Present',
-    description: 'Build and maintain the web, mobile and backend systems behind medication orders, payments and pharmacy operations.'
+    description: 'Build and maintain the web, mobile and backend systems behind medication orders, payments and pharmacy operations.',
     highlight: 'Improved API response times by tuning database queries and geospatial indexes.',
     tags: ['Product delivery', 'Backend systems', 'Healthcare'],
   },
