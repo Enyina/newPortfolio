@@ -1,3 +1,20 @@
+## November 1, 2026 — Personal project refresh
+
+**Portfolio update is based on current personal project source, not company systems.** Employer case studies keep high-level descriptions only; no private API, patient data, internal incident report or company repo was accessed to prepare this update.
+
+| Public story | Evidence checked | Current public-safe claim |
+| --- | --- | --- |
+| Personal AI toolkit | Main-branch README and shared handoff documentation from the owner's private project | A personal rules/research/evaluation toolkit exists, with opt-in local skill installation, ChatGPT setup instructions and shared task-record support for Codex and Antigravity. User-side installation and a real two-IDE round trip are not proven. |
+| AI evaluations | Earlier documented 30 October real Codex trial and local test record | One 323-check local test run and a 15-case comparison are historical evidence. A better phrase score did not establish better real answers. |
+| Learning and activation | Current private project docs and outstanding issue acceptance | Automatic cross-chat skill activation, end-to-end improvement, approval, monitoring and rollback are not established. |
+| Moatt | Public `main` merged garment-first integration at commit `8844f87` and current README | Garment-only view is the merged default; front/back artwork, inspection and optional mannequin are in source. Procedural rendering is not photorealistic or fit/manufacturing calibrated. Public project docs cite a GitHub Pages preview, but this update did not independently recheck the live URL. |
+| Portfolio publishing | Personal portfolio main branch and `public/release.json` | New source and static checks exist. A push does not demonstrate Netlify production deployment, responsive browser acceptance or Lighthouse performance. |
+
+**Copy standards:** State what was built, what is under test and what could be better in the owner's plain language. Do not publish internal status labels (such as “owner-reported”), a long string of disclaimers after every project, fake clients, hypothetical success statistics or AI-generated-looking manifesto lines. Keep detailed source qualification here; keep on-site descriptions useful to a recruiter.
+
+**Next independent checks:** get green portfolio CI, verify the exact served Netlify version, inspect the public Moatt link, review responsive/screenshots with a human, and check accessibility and contact routes before promoting the portfolio as production-ready.
+
+
 # Career portfolio content and evidence ledger
 
 Reviewed: 2026-10-17
