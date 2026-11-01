@@ -1,5 +1,22 @@
 # What's new on the portfolio
 
+## November 1, 2026 — Updated work, simpler words
+
+**What changed**
+
+I've brought the portfolio up to date with my latest personal work. The AI project now shows the tools I've built to test coding assistants, keep track of tasks and switch between tools without losing the work. Moatt now reflects the garment-first editor, including a link to its public preview.
+
+I also went back through the writing. Project descriptions are shorter, the awkward review-style labels are gone, and the site speaks more like I would explain these projects to someone in person. I fixed a website error and updated tests that still expected the old project order.
+
+**Why it matters**
+
+Someone visiting the site should quickly understand what I work on and what I've actually built. They can dig into the projects without having to read an engineering report.
+
+**What to know**
+
+The AI toolkit is still being tested, and Moatt is still a prototype. These updates are saved in the website's code; the live website and full set of checks still need confirmation.
+
+
 ## October 30, 2026 — More of my own voice
 
 **What changed**
