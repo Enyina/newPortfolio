@@ -1,17 +1,14 @@
 {
   "app": "Matthew Enyina portfolio",
-  "release": "interactive-ai-engineering-evidence",
-  "version": "2026-10-30-human-voice-quality-review",
+  "release": "current-projects-and-human-voice",
+  "version": "2026-11-01-personal-project-refresh",
   "source": "Enyina/newPortfolio",
   "branch": "main",
   "includes": [
-    "five selected case studies with private AI engineering first",
-    "interactive four-scenario AI engineering explanation",
-    "real-agent comparison with visible evidence limits",
-    "mobile and keyboard-friendly proof presentation",
-    "printable résumé and existing contact flow",
-    "plain-English engineering case studies",
-    "more readable mobile typography",
-    "world-class portfolio evaluation roadmap"
+    "updated personal AI engineering toolkit and handoff progress",
+    "merged Moatt garment-only editor and public preview link",
+    "simpler copy without internal audit labels",
+    "updated AI walkthrough and historical test context",
+    "existing work history, résumé and contact journey"
   ]
 }
