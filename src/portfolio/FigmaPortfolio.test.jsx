@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import {render, screen} from '@testing-library/react';
+import {render, screen, within} from '@testing-library/react';
 import FigmaPortfolio from './FigmaPortfolio';
 import {aiLab} from './aiProof.mjs';
 
@@ -35,4 +35,37 @@ describe('portfolio main journeys', () => {
     expect(screen.getByRole('link', {name:/View public repository/i})).toHaveAttribute('href','https://github.com/Enyina/moatt');
     expect(screen.getByText(/latest live preview has not been rechecked/i)).toBeInTheDocument();
   });
+  test('the homepage offers three purposeful routes into the work', () => {
+    window.history.replaceState({}, '', '/');
+    render(<FigmaPortfolio />);
+    expect(screen.getByRole('heading', {name:/Three ways into my work/i})).toBeInTheDocument();
+    expect(screen.getByRole('link', {name:/What happens when I disagree with an AI suggestion/i}))
+      .toHaveAttribute('href', '/work/evidence-driven-ai-workflows');
+    expect(screen.getByRole('link', {name:/What do you do when a payment times out/i}))
+      .toHaveAttribute('href', '/work/payment-payout-reliability');
+    expect(screen.getByRole('link', {name:/Can you try something I built/i}))
+      .toHaveAttribute('href', '/work/moatt-studio');
+  });
+
+  test('every case study provides chapters and a way to keep exploring', () => {
+    window.history.replaceState({}, '', '/work/evidence-driven-ai-workflows');
+    render(<FigmaPortfolio />);
+    const chapters = screen.getByRole('navigation', {name:/Explore this project's story/i});
+    expect(within(chapters).getByRole('link', {name:/The tricky part/i}))
+      .toHaveAttribute('href', '#the-hard-part');
+    expect(screen.getByText(/One proposed skill scored better on a test/i)).toBeInTheDocument();
+    expect(screen.getByRole('navigation', {name:/What to read next/i})).toBeInTheDocument();
+    expect(screen.getByRole('link', {name:/Next: Keeping pharmacy orders on track/i}))
+      .toHaveAttribute('href','/work/pharmacy-order-orchestration');
+    expect(screen.getByRole('link', {name:/Or get in touch/i}))
+      .toHaveAttribute('href','/#contact');
+  });
+
+  test('an archived project can still reach the résumé without a dead end', () => {
+    window.history.replaceState({}, '', '/work/shop-kego');
+    render(<FigmaPortfolio />);
+    expect(screen.getByRole('navigation', {name:/What to read next/i})).toBeInTheDocument();
+    expect(screen.getByRole('link', {name:/View my résumé/i})).toHaveAttribute('href','/resume');
+  });
+
 });
