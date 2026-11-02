@@ -13,11 +13,12 @@ GitHub Pages is suitable for static files and compiled frontend bundles. It does
 **Fee Processing — static educational calculator.**
 
 - Project: `Enyina/Fee-Processing`, draft PR #1.
-- Public-safe isolated preview: `demo/index.html`, `demo/calc.js`, `demo/app.js`, `demo/styles.css` (no payment or account functionality).
-- Tests: `node --test demo/calc.test.cjs`, including exact arithmetic, invalid inputs, rate limits and a source check for network calls / credentials.
-- Deployment workflow: `.github/workflows/demo-pages.yml` validates on PR; after an approved merge to `main`, the build can publish via GitHub Pages if the repository has **Settings → Pages → Source: GitHub Actions** enabled.
-- **Status:** Demo checks passed on its PR. No Pages deployment or working public URL verified; not eligible for a public résumé demo link yet.
-- **If deployed:** check the GitHub Pages Actions job succeeded and open the URL returned by the deployment; verify form behavior on phone and desktop; then add it to the personal project portfolio as an **educational fee-calculation demo**, not a live processor.
+- Public-safe standalone preview is now on the **personal Fee Processing repository's `main` branch**: `demo/index.html`, `demo/calc.js`, `demo/app.js`, `demo/styles.css`. The unfinished API changes remain on a separate draft PR.
+- Tests: `node --test demo/calc.test.cjs`, including exact arithmetic, invalid inputs, rate limits and a source check for network calls / credentials. The public-demo verification job passed.
+- Hosting attempt: the GitHub Pages workflow uploaded the artifact, but its deployment failed at `actions/configure-pages` because **Pages is not enabled for this repository**. This is a repository settings prerequisite, not a failed calculator test.
+- **Required owner UI action:** open `Enyina/Fee-Processing` → **Settings → Pages → Build and deployment → Source: GitHub Actions**. Then rerun **Fee illustration — static preview** under Actions.
+- **Status:** Browser demo source and tests are published to the code repository; GitHub Pages is **not live or verified**. Do not place a live-demo link on the résumé yet.
+- **After Pages is enabled:** check the GitHub Pages Actions job succeeded and open the URL returned by the deployment; verify form behavior on phone and desktop; then add it to the personal project portfolio as an **educational fee-calculation demo**, not a live processor.
 
 ## Intentionally not hosted now
 
