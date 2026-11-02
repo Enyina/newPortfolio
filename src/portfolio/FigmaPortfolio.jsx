@@ -37,6 +37,27 @@ function Hero(){
     </div>
   </section>;
 }
+function StoryPaths(){
+  const paths=[
+    {number:'01',eyebrow:'HOW I THINK',title:'What happens when I disagree with an AI suggestion?',description:'A real experiment made me question a better-looking test score.',link:'/work/evidence-driven-ai-workflows',cta:'See the experiment'},
+    {number:'02',eyebrow:'HOW I BUILD',title:'What do you do when a payment times out?',description:'The engineering behind knowing whether to retry or investigate.',link:'/work/payment-payout-reliability',cta:'Explore the problem'},
+    {number:'03',eyebrow:'WHAT I MAKE',title:'Can you try something I built?',description:'A clothing-design prototype with a garment-first preview.',link:'/work/moatt-studio',cta:'Meet Moatt'},
+  ];
+  return <section className="fm-story-paths fm-section" aria-labelledby="story-paths-heading">
+    <div className="fm-container">
+      <span className="fm-kicker"><b>START HERE</b></span>
+      <h2 id="story-paths-heading">Three ways into my work.</h2>
+      <p className="fm-story-paths-intro">Pick what interests you. I'll show you what I was trying to solve, what I built and what I learned.</p>
+      <div className="fm-story-paths-grid">{paths.map(path=><a className="fm-story-path" key={path.number} href={path.link}>
+        <span className="fm-story-path-top"><span>{path.number} / {path.eyebrow}</span><span aria-hidden="true">↗</span></span>
+        <strong>{path.title}</strong>
+        <span className="fm-story-path-description">{path.description}</span>
+        <span className="fm-story-path-action">{path.cta} <span aria-hidden="true">→</span></span>
+      </a>)}</div>
+    </div>
+  </section>;
+}
+
 function Stats(){const stats=[['6+ years','Working across products'],['Web + mobile','React, Expo and APIs'],['Payments','Reliability and integrations'],['AI tools','Research and agent testing']];return <section className="fm-stats" aria-label="Areas of expertise"><div className="fm-container fm-stats-grid">{stats.map(([a,b])=><div key={a}><strong>{a}</strong><span>{b}</span></div>)}</div></section>}
 function About(){return <section id="about" className="fm-section fm-about"><div className="fm-container fm-about-grid"><div><span className="fm-kicker"><b>01</b> / ABOUT</span><h2>I like the hard parts <em>of building software.</em></h2></div><div><p>{site.about}</p><p>I care about the details that usually show up after a product launches: the slow request, the failed payment, the flow nobody expected. Fixing those is part of building something good.</p><a href="#contact" className="fm-inline-link">Let's work together ↗</a></div></div></section>}
 function Experience(){return <section id="experience" className="fm-section"><div className="fm-container"><Title label="02 / EXPERIENCE" title="Where I've worked" subtitle="The products I've helped build and the problems I've worked through."/><div className="fm-timeline">{experience.map((j,i)=><article className="fm-job" key={j.id}><span className="fm-job-index">{String(i+1).padStart(2,'0')}</span><div><h3>{j.title}</h3><p className="fm-job-company">{j.company}</p><p className="fm-job-copy">{j.description}</p>{j.highlight&&<p className="fm-job-proof">{j.highlight}</p>}</div><small>{j.period}</small></article>)}</div><div className="fm-resume-prompt"><a href="/resume" className="fm-inline-link">View full résumé · Print or save as PDF ↗</a></div></div></section>}
@@ -93,21 +114,48 @@ function Contact(){return <section id="contact" className="fm-contact"><div clas
   <div className="fm-contact-social"><External href={site.github}>GitHub ↗</External><External href={site.linkedin}>LinkedIn ↗</External><span>{site.location}</span></div></div></section>}
 function Detail({slug}){
   const p=findProject(slug);
+  const index=work.findIndex(item=>item.slug===slug);
+  const next=index>=0 && index<work.length-1?work[index+1]:null;
+  const chapters=p?[
+    {id:'the-problem',title:'The problem',text:p.context},
+    {id:'my-part',title:'What I built',text:p.contribution},
+    {id:'the-hard-part',title:'The tricky part',text:p.turningPoint},
+    {id:'the-result',title:'Where it stands',text:p.outcome},
+    {id:'what-i-learned',title:'What I learned',text:p.lessons},
+  ].filter(chapter=>chapter.text):[];
   return <main className="fm-container fm-detail" id="main-content">
     <a href="/#projects" className="fm-inline-link">← Back to selected work</a>
     {p?<>
       <span className="fm-kicker">{p.category} · {p.statusLabel||'Earlier work'}</span>
       <h1>{p.title}</h1><p className="fm-detail-lead">{p.summary}</p>
-      {[['The problem',p.context],['What I built',p.contribution],['What came out of it',p.outcome],['What I learned',p.lessons]]
-        .filter(([,description])=>description).map(([title,description])=>
-          <section key={title}><h2>{title}</h2><p>{description}</p></section>)}
+      {chapters.length>0&&<nav className="fm-detail-steps" aria-label="Explore this project's story">
+        {chapters.map((chapter,i)=><a key={chapter.id} href={'#'+chapter.id}><span>{String(i+1).padStart(2,'0')}</span>{chapter.title}</a>)}
+      </nav>}
+      <div className="fm-detail-story">
+        {chapters.map((chapter,i)=><section id={chapter.id} className="fm-detail-chapter" key={chapter.id}>
+          <span className="fm-detail-chapter-number">{String(i+1).padStart(2,'0')}</span>
+          <div><h2>{chapter.title}</h2><p>{chapter.text}</p></div>
+        </section>)}
+      </div>
       {p.slug==='evidence-driven-ai-workflows'&&<section className="fm-detail-ai-evidence" aria-labelledby="ai-evidence-heading"><span className="fm-kicker"><b>FROM MY OWN TESTING</b></span><h2 id="ai-evidence-heading">A closer look</h2><p>{aiLab.disclaimer}</p><div className="fm-detail-proof-grid">{aiCaseEvidence.map(item=><article key={item.label}><span>{item.level}</span><h3>{item.finding}</h3><p>{item.detail}</p></article>)}</div><a className="fm-inline-link" href="/#ai-lab">Try the walkthrough ↗</a></section>}
       {p.demoUrl&&<External href={p.demoUrl}>Open Moatt preview ↗</External>}
       <section><h2>Tools I used</h2><div className="fm-chips">{p.tags.map(t=><span key={t}>{t}</span>)}</div></section>
       {p.evidenceNote&&<p className="fm-evidence-note">{p.evidenceNote}</p>}
       {p.repositoryUrl&&<External href={p.repositoryUrl}>View public repository ↗</External>}
+      <nav className="fm-detail-next" aria-label="What to read next">
+        <div>
+          <span className="fm-kicker">KEEP EXPLORING</span>
+          <h2>{next?'One more project?':'Want to see the bigger picture?'}</h2>
+          <p>{next?'Here is another problem I worked through.':'The résumé puts my work and skills together in one place.'}</p>
+        </div>
+        <div className="fm-detail-next-links">
+          {next&&<a href={'/work/'+next.slug} className="fm-button fm-button-primary">Next: {next.title} →</a>}
+          <a href="/resume" className="fm-button fm-button-quiet">View my résumé →</a>
+          <a href="/#contact" className="fm-inline-link">Or get in touch ↗</a>
+        </div>
+      </nav>
     </>:<><h1>Project not found</h1><p>This project may no longer be published.</p></>}
   </main>;
 }
 const renderedSections={about:About,experience:Experience,work:Projects,skills:Skills,services:Services,contact:Contact};
-export default function FigmaPortfolio(){const route=resolveRoute(window.location.pathname);return <div className="fm-page"><a href="#main-content" className="fm-skip">Skip to content</a><Header/>{route.kind==='home'?<main id="main-content"><Hero/><Stats/><AIEvidenceLab/>{getVisibleSections().map(({id})=>{const Section=renderedSections[id];return Section?<Section key={id}/>:null})}</main> : route.kind==='resume'?<ResumePage/>:<Detail slug={route.kind==='project'?route.slug:null}/>}<footer className="fm-footer"><div className="fm-container"><span>Matthew Enyina</span><span>Made by me, and still improving.</span><span>© {new Date().getFullYear()}</span></div></footer></div>}
+export default function FigmaPortfolio(){const route=resolveRoute(window.location.pathname);return <div className="fm-page"><a href="#main-content" className="fm-skip">Skip to content</a><Header/>{route.kind==='home'?<main id="main-content"><Hero/><Stats/><StoryPaths/><AIEvidenceLab/>{getVisibleSections().map(({id})=>{const Section=renderedSections[id];return Section?<Section key={id}/>:null})}</main> : route.kind==='resume'?<ResumePage/>:<Detail slug={route.kind==='project'?route.slug:null}/>}<footer className="fm-footer"><div className="fm-container"><span>Matthew Enyina</span><span>Made by me, and still improving.</span><span>© {new Date().getFullYear()}</span></div></footer></div>}
