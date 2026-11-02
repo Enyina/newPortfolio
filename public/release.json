@@ -1,14 +1,15 @@
 {
   "app": "Matthew Enyina portfolio",
-  "release": "case-studies-and-resume-as-a-story",
-  "version": "2026-11-02-portfolio-story-journey",
+  "release": "senior-resume-and-sticky-project-stories",
+  "version": "2026-11-02-senior-career-sticky-journey",
   "source": "Enyina/newPortfolio",
   "branch": "main",
   "includes": [
-    "three ways to explore selected work from the homepage",
-    "five clear chapters per featured project and reading progress",
-    "next-project, resume and contact routes from every case study",
-    "web resume with chapters, project links and a simple print layout",
-    "subtle interface animation with a reduced-motion option"
+    "senior resume with job-specific technical contributions",
+    "sticky selected-project introduction on desktop",
+    "sticky case-study reading guide on desktop",
+    "responsive normal-flow navigation on mobile",
+    "personal work and employment kept distinct",
+    "reviewed plans for safe static demo hosting"
   ]
 }
