@@ -66,8 +66,14 @@ function Projects(){
   return <section id="projects" className="fm-section fm-section-lined">
     <span id="work" className="fm-anchor" aria-hidden="true"/>
     <div className="fm-container">
-      <Title label="03 / SELECTED WORK" title="Selected work" subtitle="Work I've done for teams, alongside projects I'm building for myself."/>
-      <div className="fm-project-grid">
+      <div className="fm-projects-layout">
+        <div className="fm-projects-intro">
+          <Title label="03 / SELECTED WORK" title="Selected work" subtitle="Work I've done for teams, alongside projects I'm building for myself."/>
+          <p className="fm-projects-guide">Scroll through the projects, or open one to follow the decisions behind it.</p>
+          <a href="/resume" className="fm-inline-link">See my full résumé ↗</a>
+        </div>
+        <div className="fm-projects-content">
+          <div className="fm-project-grid">
         {work.map((p,i)=><article key={p.slug} className={p.slug==='evidence-driven-ai-workflows'?'fm-project fm-project-featured':'fm-project'}>
           <a href={'/work/'+p.slug} className="fm-project-top"><span>{String(i+1).padStart(2,'0')} / {p.category}</span><span>↗</span></a>
           <div className="fm-project-main">
@@ -86,6 +92,8 @@ function Projects(){
           <article key={p.slug}><div><h3><a href={'/work/'+p.slug}>{p.title} ↗</a></h3><p>{p.summary}</p></div><a href={'/work/'+p.slug}>Read more →</a></article>
         )}</div>
       </details>
+        </div>
+      </div>
     </div>
   </section>;
 }
@@ -129,12 +137,14 @@ function Detail({slug}){
     {p?<>
       <span className="fm-kicker">{p.category} · {p.statusLabel||'Earlier work'}</span>
       <h1>{p.title}</h1><p className="fm-detail-lead">{p.summary}</p>
-      <StoryProgress chapters={chapters}/>
-      <div className="fm-detail-story">
-        {chapters.map((chapter,i)=><section id={chapter.id} className="fm-detail-chapter" key={chapter.id}>
-          <span className="fm-detail-chapter-number">{String(i+1).padStart(2,'0')}</span>
-          <div><h2>{chapter.title}</h2><p>{chapter.text}</p></div>
-        </section>)}
+      <div className="fm-detail-reading-layout">
+        <StoryProgress chapters={chapters}/>
+        <div className="fm-detail-story">
+          {chapters.map((chapter,i)=><section id={chapter.id} className="fm-detail-chapter" key={chapter.id}>
+            <span className="fm-detail-chapter-number">{String(i+1).padStart(2,'0')}</span>
+            <div><h2>{chapter.title}</h2><p>{chapter.text}</p></div>
+          </section>)}
+        </div>
       </div>
       {p.slug==='evidence-driven-ai-workflows'&&<section className="fm-detail-ai-evidence" aria-labelledby="ai-evidence-heading"><span className="fm-kicker"><b>FROM MY OWN TESTING</b></span><h2 id="ai-evidence-heading">A closer look</h2><p>{aiLab.disclaimer}</p><div className="fm-detail-proof-grid">{aiCaseEvidence.map(item=><article key={item.label}><span>{item.level}</span><h3>{item.finding}</h3><p>{item.detail}</p></article>)}</div><a className="fm-inline-link" href="/#ai-lab">Try the walkthrough ↗</a></section>}
       {p.demoUrl&&<External href={p.demoUrl}>Open Moatt preview ↗</External>}
