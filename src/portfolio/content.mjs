@@ -29,27 +29,53 @@ export const experience = [
   {
     id: 'famasi', title: 'Senior Full-Stack Product Engineer', company: 'Famasi Africa',
     period: 'Jun 2024 — Present',
-    description: 'Build and maintain the web, mobile and backend systems behind medication orders, payments and pharmacy operations.',
-    highlight: 'Improved API response times by tuning database queries and geospatial indexes.',
-    tags: ['Product delivery', 'Backend systems', 'Healthcare'],
+    description: 'I work across patient apps, internal tools and the APIs behind medication ordering, payments and pharmacy operations.',
+    impact: 'Building and improving the systems that keep an order moving from request to fulfillment.',
+    achievements: [
+      'Deliver full-stack features across React, React Native and Node.js/TypeScript, connecting the customer experience to pharmacy and operations workflows.',
+      'Build and debug real-time pharmacy offers, order updates and handoffs, making failed or stalled steps easier to investigate.',
+      'Work on payment, wallet and external-provider integrations, with particular attention to repeat requests, uncertain outcomes and recovery.',
+      'Improve API responsiveness through database query tuning and geospatial indexing.',
+    ],
+    caseStudies: [
+      {label:'Order workflows',slug:'pharmacy-order-orchestration'},
+      {label:'Payments and recovery',slug:'payment-payout-reliability'},
+      {label:'Voice-assisted ordering',slug:'voice-assisted-ordering'},
+    ],
+    tags: ['TypeScript', 'Node.js', 'React Native', 'MongoDB', 'Payments'],
   },
   {
     id: 'dabaobject', title: 'Frontend Engineer (Contract)', company: 'DabaObject LLC',
     period: 'Jan 2024 — May 2024',
-    description: 'Built a mobile-first restaurant ordering experience with reusable React components and smoother delivery workflows.',
-    tags: ['React', 'Design systems', 'Ordering'],
+    description: 'Built interfaces for a mobile-first restaurant ordering experience.',
+    impact: 'Making a multi-step ordering journey feel clear on smaller screens.',
+    achievements: [
+      'Developed responsive ordering screens and reusable React components for browsing and placing orders.',
+      'Worked on the front-end details that connect customer actions to order and delivery workflows.',
+    ],
+    tags: ['React', 'Responsive UI', 'Reusable components'],
   },
   {
     id: 'yebox', title: 'Backend Engineer', company: 'YEBOX',
     period: 'Aug 2023 — Jan 2024',
-    description: 'Worked through performance and reliability issues in an existing logistics backend, then backed the fixes with tests and clearer documentation.',
-    tags: ['Node.js', 'PostgreSQL', 'Testing'],
+    description: 'Worked on the backend of an existing logistics product.',
+    impact: 'Making a legacy service easier to maintain, test and integrate.',
+    achievements: [
+      'Investigated performance and reliability problems in Node.js and PostgreSQL services.',
+      'Added automated regression checks and clearer integration documentation while improving existing workflows.',
+    ],
+    tags: ['Node.js', 'PostgreSQL', 'API testing'],
   },
   {
     id: 'howmies', title: 'Full-Stack Engineer', company: 'Howmies',
     period: 'Jan 2020 — Aug 2023',
-    description: 'Built features across property search, bookings, payments and notifications, and helped keep the product running.',
-    tags: ['Node.js', 'React', 'PropTech'],
+    description: 'Built features across a property rental product, from the interface to the backend.',
+    impact: 'Turning property discovery into a booking flow people could actually complete.',
+    achievements: [
+      'Worked across property search, booking, payment and notification features.',
+      'Connected application screens, APIs and integrations, and helped maintain and deploy the product.',
+    ],
+    tags: ['React', 'Node.js', 'Bookings', 'Payments'],
   },
 ];
 
