@@ -1,3 +1,12 @@
+## November 2, 2026 — Career story and demo-housing progress
+
+- Portfolio career timeline and résumé now lead with the full-stack scope, system reliability work and project contributions behind each of four published roles. The public copy does not claim employer revenue, new management responsibilities or unsupported percentages.
+- Two independent personal products are emphasized in the résumé: the private AI research/evaluation toolkit and public Moatt prototype. Archived exercises are still findable on the portfolio site, but do not dilute the résumé.
+- Desktop project browsing now keeps the project introduction visible; case studies keep their chapter navigation alongside the reading column. Small screens use normal flow, not stacked sticky panels.
+- A standalone, no-backend **Fee Processing** demonstration was added to a review PR and passes its own demo checks. GitHub Pages hosting is staged but **not confirmed live**. Do not add a demonstration link or claim commercial payment capability until the actual static published site is verified.
+- Next checks: portfolio React tests and production build, mobile scrolling and print, static calculator Pages source configuration, and public live URL smoke tests.
+- Detailed hosting boundaries: [Demo hosting and career promotion](DEMO-HOSTING-AND-CAREER-PROMOTION.md).
+
 # Project renewal lab
 
 **Review date:** 2 November 2026. **Public-safe inventory only.** This file does not grant permission to access workplace software or publish private AI source. The rankings are **priorities for further work**, not verified product quality scores.
