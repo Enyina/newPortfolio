@@ -1,3 +1,11 @@
+## November 2, 2026 — Career impact writing
+
+The stronger public résumé now describes the actual technical work under all four roles instead of merely repeating job titles. It restores **approximately 70% API response-time improvement**, which was already claimed in the owner's October 5 CV for query optimization/geospatial indexing. This remains a personal résumé claim, not a newly independently audited performance result. No additional percentage, revenue number, team size, leadership title or company-confidential detail has been invented.
+
+The web résumé highlights two personal projects (private AI engineering toolkit and Moatt) and links to a few high-level employer engineering cases. Draft chat and fee improvements do not become production claims just because a PR exists.
+
+The static educational fee calculator has tests that passed, but GitHub Pages deployment failed because Pages is not enabled for the personal Fee Processing repository. Treat the hosting URL as pending and require verified published behavior before linking it.
+
 ## November 1, 2026 — Personal project refresh
 
 **Portfolio update is based on current personal project source, not company systems.** Employer case studies keep high-level descriptions only; no private API, patient data, internal incident report or company repo was accessed to prepare this update.
