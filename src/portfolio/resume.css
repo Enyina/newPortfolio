@@ -99,3 +99,12 @@
  .resume-page__job{border-color:#bbb}
  .resume-page__section-head h2{color:#171717!important}
 }
+
+
+/* On paper, the career timeline already covers work examples. Keep two personal
+   projects, rather than printing the same workplace experience twice. */
+@media print{
+  .resume-page__project:not(.is-personal){display:none!important}
+  .resume-page__project{break-inside:avoid}
+  .resume-page__intro p{orphans:2;widows:2}
+}
