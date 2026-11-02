@@ -39,3 +39,63 @@
   .resume-page__work article{border:1px solid #ccc}
   .resume-page__footnote{color:#555!important}
 }
+
+
+/* Reading journey for the web; a clean chronological résumé on paper. */
+.resume-page__intro{padding:28px 0 12px;max-width:770px}
+.resume-page__intro .resume-page__opening{font-size:clamp(18px,2.5vw,22px);line-height:1.6;color:#f0e8df;font-weight:550;letter-spacing:-.025em}
+.resume-page__intro p{font-size:14px;line-height:1.8;margin:0 0 16px;color:#b9bdc1}
+.resume-page__jump{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:25px 0 8px}
+.resume-page__jump a{min-height:58px;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:14px 18px;border:1px solid #46403b;background:#211c19;border-radius:9px;color:#f1e5da;font-size:12px;font-weight:700;transition:background .15s ease,border-color .15s ease}
+.resume-page__jump a:hover{background:#30241d;border-color:#cb8b5a;text-decoration:none}
+.resume-page__jump a span{color:#f1aa78;font-size:17px}
+.resume-page section{scroll-margin-top:90px}
+.resume-page__section-head{display:flex;gap:16px;align-items:baseline;margin-bottom:23px}
+.resume-page__section-head>span{font-size:12px;color:#d68a54;font-weight:750}
+.resume-page__section-head h2{margin:0}
+.resume-page__section-head p{margin-top:7px;font-size:13px;color:#a8abae}
+.resume-page__job{padding-left:18px;border-left:1px solid #3c3531}
+.resume-page__case-link{display:inline-flex;align-items:center;min-height:44px;margin-top:12px;color:#efa971!important;font-size:13px;font-weight:700}
+.resume-page__case-link:hover{text-decoration:underline}
+.resume-page__work{gap:13px}
+.resume-page__project{border:1px solid #36383d;padding:20px;border-radius:10px;background:#151618;transition:background .15s ease,border-color .15s ease}
+.resume-page__project:hover{background:#1e1b1a;border-color:#a76944}
+.resume-page__project.is-personal{border-color:#684532}
+.resume-page__project-index{font-size:11px;color:#e3aa82;font-weight:700;letter-spacing:.04em}
+.resume-page__project h3{margin:12px 0 8px;font-size:15px}
+.resume-page__project h3 a{color:#f5e5d8}
+.resume-page__project p{font-size:13px;line-height:1.75}
+.resume-page__project-note{margin-top:15px;font-size:12px;color:#a4a7aa}
+.resume-page__skills>div{padding:12px 0;border-bottom:1px solid #292b2d}
+.resume-page__skills h3{color:#f1efeb}
+.resume-page__closing{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:30px;margin-top:38px;background:#241d18;border:1px solid #654934;border-radius:12px}
+.resume-page__closing h2{font-size:22px;line-height:1.25;letter-spacing:-.04em;text-transform:none;margin:0 0 10px;color:#f4e6d9}
+.resume-page__closing p{max-width:520px;margin:0;font-size:13px}
+.resume-page__closing>a{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;min-height:46px;background:#e8823a;color:#17110c;padding:0 19px;border-radius:30px;font-size:13px;font-weight:750}
+.resume-page__closing>a:hover{background:#ffad72;text-decoration:none}
+@media(max-width:700px){
+ .resume-page__jump{grid-template-columns:1fr}
+ .resume-page__closing{flex-direction:column;align-items:flex-start}
+ .resume-page__closing>a{width:100%}
+ .resume-page__intro{padding-top:25px}
+}
+@media(prefers-reduced-motion:reduce){
+ .resume-page__jump a,.resume-page__project{transition:none}
+}
+@media print{
+ .resume-page__jump,.resume-page__case-link,.resume-page__closing{display:none!important}
+ .resume-page__intro{padding:13px 0 0!important;max-width:none}
+ .resume-page__intro .resume-page__opening{font-size:10.5pt;color:#171717!important}
+ .resume-page__intro p{font-size:9pt;color:#222!important}
+ .resume-page__section-head{margin-bottom:8px;gap:9px}
+ .resume-page__section-head>span{font-size:9pt;color:#444}
+ .resume-page__section-head p{display:none}
+ .resume-page__project-index{font-size:8pt;color:#555}
+ .resume-page__work{gap:7px}
+ .resume-page__project{background:none!important;border:1px solid #ddd!important;padding:9px;break-inside:avoid}
+ .resume-page__project h3{font-size:9pt;margin:5px 0}
+ .resume-page__project p,.resume-page__project-note{font-size:8pt}
+ .resume-page__skills>div{padding:5px 0}
+ .resume-page__job{border-color:#bbb}
+ .resume-page__section-head h2{color:#171717!important}
+}
