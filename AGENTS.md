@@ -57,3 +57,12 @@ Select solutions based on real visitor needs and test responsive display, keyboa
 When an authorized change is complete, save it in a focused Git commit with a clear description. Do not leave completed work uncommitted. Keep unrelated work and private information out of the commit. Follow this project's existing delivery and approval requirements; do not assume committing gives permission to push or publish. If a higher-priority rule or direct instruction prevents a commit, explain that clearly.
 
 For each meaningful change, update `RELEASE_NOTES.md` using **only everyday English that a person with no software background can understand**. Explain what changed, why it matters, and anything people still cannot use. Avoid technical language, implementation details, command names, source filenames, abbreviations and internal test names. Do not say a change is live or available until publication is verified. Keep technical checks in engineering reports, not release notes.
+
+## Story and interaction standards
+
+For a personal case study, use the applicable ideas from the owner's **five-beat storytelling** and **Observe → Customize → Edge** candidate skills without importing any external creative script or employer data. Make the opening problem concrete, show the actual work, introduce a genuine trade-off, explain the current result and end with an earned lesson. Skip a beat when reality doesn't supply one; never invent a dramatic setback.
+
+Navigation should build on that progression. Keep a direct route from the homepage to each main project, from a chapter to the rest of the story, and from project endings to another project, résumé or contact. The web résumé can feel personable and interactive; the print version must remain conventional, accurate and readable.
+
+Motion is welcome when it demonstrates a real frontend skill or communicates a change in state. Add tasteful hover, progress and transitions, but no animation-only explanation, autoplay surprises or obstructive scroll behavior. Always test keyboard access, reduced-motion, small phones and low-powered devices. See [story journey and acceptance](docs/PORTFOLIO-STORY-JOURNEY.md).
+
