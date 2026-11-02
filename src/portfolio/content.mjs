@@ -35,7 +35,7 @@ export const experience = [
       'Deliver full-stack features across React, React Native and Node.js/TypeScript, connecting the customer experience to pharmacy and operations workflows.',
       'Build and debug real-time pharmacy offers, order updates and handoffs, making failed or stalled steps easier to investigate.',
       'Work on payment, wallet and external-provider integrations, with particular attention to repeat requests, uncertain outcomes and recovery.',
-      'Improve API responsiveness through database query tuning and geospatial indexing.',
+      'Reduced API response times by approximately 70% through database query tuning and geospatial indexing.',
     ],
     caseStudies: [
       {label:'Order workflows',slug:'pharmacy-order-orchestration'},
