@@ -104,3 +104,23 @@
   .ai-lab-option{min-height:52px}
   .ai-lab-intro h2{line-height:1.15}
 }
+
+
+/* Motion explains changes of state instead of distracting from the story. */
+.ai-lab-scene{animation:ai-scene-in .32s cubic-bezier(.22,.8,.35,1) both}
+@keyframes ai-scene-in{from{opacity:.35;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.ai-lab-orbit:before{animation:ai-ring-rotate 22s linear infinite}
+.ai-lab-orbit i{animation:ai-orbit-twinkle 3.1s ease-in-out infinite alternate}
+.ai-lab-orbit i:nth-of-type(2){animation-delay:.55s}
+.ai-lab-orbit i:nth-of-type(3){animation-delay:1.3s}
+@keyframes ai-ring-rotate{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+@keyframes ai-orbit-twinkle{from{box-shadow:0 0 0 0 rgba(232,130,58,0)}to{box-shadow:0 0 0 6px rgba(232,130,58,.14)}}
+.ai-lab-measure .ai-lab-bar-track>span{transform-origin:left center;animation:ai-bar-grow 1s cubic-bezier(.18,.7,.32,1) both}
+.ai-lab-measure .ai-lab-bar-row-candidate .ai-lab-bar-track>span{animation-delay:.2s}
+@keyframes ai-bar-grow{from{transform:scaleX(.02)}to{transform:scaleX(1)}}
+.ai-lab-option{transition:background .16s ease,color .16s ease,border-color .16s ease}
+.ai-lab-option.is-active{box-shadow:inset 3px 0 0 #ef9c60}
+@media(prefers-reduced-motion:reduce){
+ .ai-lab-scene,.ai-lab-orbit:before,.ai-lab-orbit i,.ai-lab-measure .ai-lab-bar-track>span{animation:none!important;transform:none!important;opacity:1!important}
+ .ai-lab-option{transition:none}
+}
