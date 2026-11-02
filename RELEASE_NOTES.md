@@ -1,5 +1,24 @@
 # What's new on the portfolio
 
+## November 2, 2026 — A clearer picture of what I've built
+
+**What changed**
+
+The résumé now gives each job the space it deserves. Instead of a short sentence under every role, it explains the actual engineering work: the apps, APIs, payment flows, integrations, performance fixes and harder problems I helped solve. The strongest personal projects have their own place without crowding out the career history.
+
+On the website, the selected-project introduction stays in view while you browse the projects. On larger screens, the chapter guide follows you through a case study. On phones, it stays out of the way. The résumé has also been made easier to scan and print.
+
+I'm working toward free online demos for older personal projects. A small fee-calculation illustration has passed its own checks, but it isn't publicly hosted yet, so there's no misleading demo link on the portfolio.
+
+**Why it matters**
+
+A visitor should see the breadth of my work quickly and have a reason to explore deeper—without needing access to private source code or exaggerated numbers.
+
+**What to know**
+
+The new source and automated checks are committed. Complete website tests, actual mobile scrolling, the printed résumé and the live site still need confirmation.
+
+
 ## November 2, 2026 — A better way to explore my work
 
 **What changed**
