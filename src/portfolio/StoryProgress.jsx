@@ -10,12 +10,13 @@ export default function StoryProgress({chapters}) {
   const chapterKey = chapters.map(chapter => chapter.id).join('|');
 
   useEffect(() => {
-    if (!chapters.length) return;
+    const ids = chapterKey ? chapterKey.split('|') : [];
+    if (!ids.length) return;
     let scheduled = false;
     let frame;
     const update = () => {
       scheduled = false;
-      const sections = chapters.map(chapter => document.getElementById(chapter.id)).filter(Boolean);
+      const sections = ids.map(id => document.getElementById(id)).filter(Boolean);
       const story = document.querySelector('.fm-detail-story');
       if (!story || !sections.length) return;
       const readingLine = 180;
