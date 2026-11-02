@@ -1,14 +1,14 @@
 {
   "app": "Matthew Enyina portfolio",
-  "release": "current-projects-and-human-voice",
-  "version": "2026-11-01-personal-project-refresh",
+  "release": "case-studies-and-resume-as-a-story",
+  "version": "2026-11-02-portfolio-story-journey",
   "source": "Enyina/newPortfolio",
   "branch": "main",
   "includes": [
-    "updated personal AI engineering toolkit and handoff progress",
-    "merged Moatt garment-only editor and public preview link",
-    "simpler copy without internal audit labels",
-    "updated AI walkthrough and historical test context",
-    "existing work history, résumé and contact journey"
+    "three ways to explore selected work from the homepage",
+    "five clear chapters per featured project and reading progress",
+    "next-project, resume and contact routes from every case study",
+    "web resume with chapters, project links and a simple print layout",
+    "subtle interface animation with a reduced-motion option"
   ]
 }
