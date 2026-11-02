@@ -300,3 +300,19 @@
 @media(prefers-reduced-motion:reduce){
   .fm-detail-reading-layout .fm-detail-steps,.fm-projects-intro{scroll-behavior:auto}
 }
+
+
+/* Experience should show ownership and trade-offs, not look like four job labels. */
+.fm-job-impact{font-size:15px;line-height:1.7;color:#efe4d7!important;font-weight:620;max-width:720px;margin:12px 0 10px!important}
+.fm-job-achievements{padding-left:20px;display:grid;gap:9px;margin:12px 0 16px;color:#b7b9bc;font-size:13px;line-height:1.7}
+.fm-job-achievements li::marker{color:#e49a69}
+.fm-job-tags{display:flex;flex-wrap:wrap;gap:7px;margin:17px 0}
+.fm-job-tags span{padding:5px 9px;border:1px solid #35383b;border-radius:6px;color:#bcc0c3;font-size:11px}
+.fm-job-cases{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding-top:12px}
+.fm-job-cases>span{font-size:10px;font-weight:750;letter-spacing:.08em;color:#bd8e70}
+.fm-job-cases a{font-size:12px;color:#f3ad78;padding:9px 11px;border:1px solid #513e32;border-radius:7px}
+.fm-job-cases a:hover{border-color:#f3ad78;background:#29201b}
+@media(max-width:600px){
+  .fm-job-impact{font-size:14px}
+  .fm-job-achievements{padding-left:17px;font-size:13px}
+}
