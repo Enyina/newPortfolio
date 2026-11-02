@@ -17,7 +17,7 @@ export default function AIEvidenceLab() {
             <span>A look inside the project.</span>
           </div>
         </div>
-        <div className="ai-lab-identity" aria-label="A four-stage, review-gated engineering process">
+        <div className="ai-lab-identity" aria-label="Research, test and learn — the three parts of my personal workflow">
           <span className="ai-lab-identity-top">PERSONAL ENGINEERING TOOLS <span>v.2026</span></span>
           <div className="ai-lab-orbit" aria-hidden="true"><span>?</span><i/><i/><i/></div>
           <strong>RESEARCH <span>→</span> TEST <span>→</span> LEARN</strong>
@@ -69,7 +69,8 @@ export default function AIEvidenceLab() {
             <p>Choose a situation to see the steps.</p>
           </div>
           <div className="ai-lab-demo-screen" aria-live="polite" aria-atomic="true">
-            <div className="ai-lab-screen-top"><span><i/> {scenario.eyebrow}</span><span>EXAMPLE</span></div>
+            <div key={scenario.id} className="ai-lab-scene">
+              <div className="ai-lab-screen-top"><span><i/> {scenario.eyebrow}</span><span>EXAMPLE</span></div>
             <p className="ai-lab-question">“{scenario.question}”</p>
             <div className="ai-lab-flow" aria-label="Decision sequence">
               {scenario.stages.map((step, index) => <div className="ai-lab-flow-step" key={step.name}>
@@ -80,6 +81,7 @@ export default function AIEvidenceLab() {
             <div className="ai-lab-verdict">
               <div><span>WHAT I'D DO</span><strong>{scenario.verdict}</strong></div>
               <p>{scenario.outcome}</p>
+            </div>
             </div>
           </div>
         </div>
