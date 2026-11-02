@@ -108,3 +108,30 @@
   .resume-page__project{break-inside:avoid}
   .resume-page__intro p{orphans:2;widows:2}
 }
+
+
+/* Career summary is compact enough to print, but scannable on screen. */
+.resume-page__strengths{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 10px}
+.resume-page__strengths span{padding:8px 11px;border-radius:7px;background:#1e201f;border:1px solid #4a3b32;color:#e8d4c4;font-size:12px;font-weight:650}
+.resume-page__job-impact{font-size:14px!important;color:#efceb3!important;font-weight:660;line-height:1.65}
+.resume-page__job ul{padding-left:19px;margin:10px 0 12px;display:grid;gap:7px}
+.resume-page__job li{font-size:13px;line-height:1.75;color:#c4c5c5}
+.resume-page__job li::marker{color:#e6a171}
+.resume-page__case-links{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:9px}
+.resume-page__case-links>span{font-size:11px;color:#bcb0a9}
+.resume-page__case-link{min-height:44px;margin-top:0;padding:9px 10px;border-radius:7px;background:#211b18;border:1px solid #4d3729}
+.resume-page__project-contribution{font-size:12px!important;color:#c4b8b0!important;margin-top:9px!important}
+@media(min-width:900px){
+ .resume-page__jump{position:sticky;top:78px;z-index:12;padding:10px;background:rgba(13,14,16,.96);border:1px solid #323334;border-radius:11px;backdrop-filter:blur(14px)}
+ .resume-page__jump a{min-height:48px}
+}
+@media print{
+ .resume-page__strengths{gap:3px;margin:5px 0}
+ .resume-page__strengths span{padding:0 7px 0 0;border:0;background:transparent;color:#222!important;font-size:8pt}
+ .resume-page__strengths span:not(:last-child):after{content:" ·";color:#444}
+ .resume-page__job-impact{font-size:9pt!important;color:#222!important}
+ .resume-page__job ul{gap:3px;margin:5px 0 7px;padding-left:15px}
+ .resume-page__job li{font-size:8.5pt;line-height:1.35;color:#222!important}
+ .resume-page__case-links{display:none!important}
+ .resume-page__project-contribution{font-size:8pt!important;color:#333!important}
+}
