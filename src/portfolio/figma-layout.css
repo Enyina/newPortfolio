@@ -238,3 +238,25 @@
  .fm-detail-next{padding:24px 18px}
 }
 @media(prefers-reduced-motion:reduce){.fm-story-path{transition:none;transform:none!important}}
+
+
+/* A live reading gauge, inspired by the actual structure of each case. */
+.fm-detail-steps{display:block;margin-top:30px;padding:18px 0 16px}
+.fm-detail-steps-title{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:11px;letter-spacing:.08em;color:#dba47b;font-weight:750}
+.fm-detail-progress-value{color:#b5b4b4;font-variant-numeric:tabular-nums;letter-spacing:0}
+.fm-detail-track{height:4px;background:#353638;border-radius:5px;overflow:hidden;margin:12px 0 16px}
+.fm-detail-track>span{display:block;height:100%;background:linear-gradient(90deg,#e8823a,#f5b982);transition:width .16s ease-out}
+.fm-detail-chapter-links{display:flex;flex-wrap:wrap;gap:7px}
+.fm-detail-chapter-links a{display:inline-flex;align-items:center;gap:9px;font-size:12px;line-height:1.4;color:#b8b9bc;padding:10px 12px;border:1px solid #414145;border-radius:8px;min-height:44px;transition:color .14s ease,border-color .14s ease,background .14s ease}
+.fm-detail-chapter-links a:hover{border-color:#c58152;color:#fff;background:#241c18}
+.fm-detail-chapter-links a[aria-current="location"]{background:#33241b;border-color:#e8823a;color:#f9e6d5}
+.fm-detail-chapter-links a span{color:#e5a577;font-variant-numeric:tabular-nums;font-size:11px;font-weight:700}
+@supports(animation-timeline:view()){
+ .fm-detail-chapter>div{animation:fm-chapter-enter linear both;animation-timeline:view();animation-range:entry 0% entry 20%}
+}
+@keyframes fm-chapter-enter{from{opacity:.55;transform:translateY(9px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:590px){.fm-detail-chapter-links a{flex:1 1 134px}}
+@media(prefers-reduced-motion:reduce){
+ .fm-detail-track>span,.fm-detail-chapter-links a{transition:none}
+ .fm-detail-chapter>div{animation:none!important;transform:none!important;opacity:1!important}
+}
