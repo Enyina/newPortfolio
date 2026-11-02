@@ -1,5 +1,24 @@
 # What's new on the portfolio
 
+## November 2, 2026 — A better way to explore my work
+
+**What changed**
+
+The homepage now offers three routes into my work: a coding-assistant experiment, a payment problem and Moatt. Each project has an easy-to-follow story: what went wrong or needed building, what I did, the difficult part, where it stands and what I learned.
+
+I've redesigned the web résumé so it opens with what I enjoy working on, then leads through work history, projects and skills. It still prints as a straightforward résumé.
+
+The AI demonstration changes smoothly when you choose an example. Project pages show reading progress, highlight your current chapter and suggest another place to go when you finish. People who prefer less animation can use the same pages without the effects.
+
+**Why it matters**
+
+I want visitors to discover how I work, not just read a list of technologies. The details remain real and the writing stays grounded; nothing private is being published to make the story sound bigger.
+
+**What to know**
+
+These changes are committed to the portfolio code. The latest automated checks and live deployment need to pass before calling the new experience published.
+
+
 ## November 1, 2026 — Updated work, simpler words
 
 **What changed**
