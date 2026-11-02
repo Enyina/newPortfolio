@@ -21,7 +21,10 @@ export default function StoryProgress({chapters}) {
       const readingLine = 180;
       let visibleChapter = sections[0].id;
       for (const section of sections) {
-        if (section.getBoundingClientRect().top <= readingLine) visibleChapter = section.id;
+        const rect = section.getBoundingClientRect();
+        // Zero-height sections have no meaningful position (including during
+        // initial layout and in headless renderers). Never mark them as read.
+        if (rect.height > 0 && rect.top <= readingLine) visibleChapter = section.id;
       }
       setActive(visibleChapter);
 
