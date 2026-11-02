@@ -260,3 +260,43 @@
  .fm-detail-track>span,.fm-detail-chapter-links a{transition:none}
  .fm-detail-chapter>div{animation:none!important;transform:none!important;opacity:1!important}
 }
+
+
+/* Sticky storytelling: keep context visible, not the whole viewport occupied. */
+.fm-projects-layout{display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,2.2fr);align-items:start;gap:clamp(24px,4vw,64px)}
+.fm-projects-intro{position:sticky;top:calc(72px + 32px);min-width:0;padding-top:10px}
+.fm-projects-intro .fm-title{margin-bottom:20px}
+.fm-projects-intro .fm-title h2{font-size:clamp(28px,3vw,39px)}
+.fm-projects-guide{font-size:13px;line-height:1.8;color:#b3b4b7;margin:0 0 20px!important}
+.fm-projects-content{min-width:0}
+.fm-projects-content .fm-project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.fm-projects-content .fm-project-featured{grid-column:span 2}
+.fm-detail-reading-layout{display:grid;grid-template-columns:minmax(190px,240px) minmax(0,1fr);gap:clamp(26px,3.5vw,52px);align-items:start;margin:26px 0 46px}
+.fm-detail-reading-layout .fm-detail-steps{position:sticky;top:calc(72px + 24px);min-width:0;max-height:calc(100vh - 118px);overflow-y:auto;overscroll-behavior:contain;margin:0;padding:18px 14px;background:#17181b;border:1px solid #343539;border-radius:12px;scrollbar-width:thin}
+.fm-detail-reading-layout .fm-detail-steps-title{align-items:center}
+.fm-detail-reading-layout .fm-detail-chapter-links{display:flex;flex-direction:column;gap:6px}
+.fm-detail-reading-layout .fm-detail-chapter-links a{width:100%;min-height:42px;justify-content:flex-start}
+.fm-detail-reading-layout .fm-detail-story{min-width:0;width:100%}
+.fm-detail-reading-layout .fm-detail-chapter{scroll-margin-top:110px}
+.fm-detail-reading-layout .fm-detail-chapter:first-child{padding-top:0!important}
+.fm-detail-reading-layout .fm-detail-chapter h2{line-height:1.3}
+@media(max-width:900px){
+  .fm-projects-layout{grid-template-columns:1fr;gap:26px}
+  .fm-projects-intro{position:static;padding-top:0}
+  .fm-projects-intro .fm-title{margin-bottom:12px}
+  .fm-projects-guide{margin-bottom:14px!important}
+  .fm-detail-reading-layout{grid-template-columns:1fr;gap:22px}
+  .fm-detail-reading-layout .fm-detail-steps{position:static;overflow:visible;max-height:none;padding:14px;margin:0}
+  .fm-detail-reading-layout .fm-detail-chapter-links{display:flex;flex-direction:row;flex-wrap:wrap}
+  .fm-detail-reading-layout .fm-detail-chapter-links a{width:auto;flex:1 1 135px}
+  .fm-detail-reading-layout .fm-detail-chapter:first-child{padding-top:22px!important}
+}
+@media(max-width:530px){
+  .fm-projects-content .fm-project-grid{grid-template-columns:1fr}
+  .fm-projects-content .fm-project-featured{grid-column:span 1}
+  .fm-detail-reading-layout .fm-detail-steps{border-radius:9px}
+  .fm-detail-reading-layout .fm-detail-chapter-links a{flex:1 1 120px}
+}
+@media(prefers-reduced-motion:reduce){
+  .fm-detail-reading-layout .fm-detail-steps,.fm-projects-intro{scroll-behavior:auto}
+}
