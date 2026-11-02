@@ -66,3 +66,10 @@ Navigation should build on that progression. Keep a direct route from the homepa
 
 Motion is welcome when it demonstrates a real frontend skill or communicates a change in state. Add tasteful hover, progress and transitions, but no animation-only explanation, autoplay surprises or obstructive scroll behavior. Always test keyboard access, reduced-motion, small phones and low-powered devices. See [story journey and acceptance](docs/PORTFOLIO-STORY-JOURNEY.md).
 
+
+## Career credibility and daily project-to-portfolio loop
+
+Present my career as senior engineering work **through ownership, decisions and real complexity**—never make it sound small because the original résumé used short descriptions. For each role, emphasize actual product scope, technical contributions, reliability and collaboration, while preserving the verified job title and dates. Do not invent management responsibility, user counts, payment volumes, performance percentages or deployment success. The print résumé needs to remain easy to scan and suitable for applications.
+
+Personal project updates should flow into the portfolio only when they meaningfully improve what a visitor can see or verify. The daily personal-repo review checks commits, tests, ownership and actual demo availability; it may suggest changes, but an open PR, passing unit test or GitHub Pages workflow is **not** an available live demo. Use the [hosting/promotion checklist](docs/DEMO-HOSTING-AND-CAREER-PROMOTION.md), especially for payment, authentication and backend projects. Avoid filling the résumé with unfinished exercises.
+
