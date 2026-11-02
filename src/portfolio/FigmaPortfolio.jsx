@@ -2,6 +2,7 @@ import {useState} from 'react';
 import {site,experience,skills,services,getFeaturedProjects,getArchiveProjects,getVisibleSections,findProject,resolveRoute,safeExternal} from './content.mjs';
 import './figma-layout.css';
 import ResumePage from './ResumePage';
+import StoryProgress from './StoryProgress';
 import AIEvidenceLab from './AIEvidenceLab';
 import {aiCaseEvidence, aiLab} from './aiProof.mjs';
 
@@ -128,9 +129,7 @@ function Detail({slug}){
     {p?<>
       <span className="fm-kicker">{p.category} · {p.statusLabel||'Earlier work'}</span>
       <h1>{p.title}</h1><p className="fm-detail-lead">{p.summary}</p>
-      {chapters.length>0&&<nav className="fm-detail-steps" aria-label="Explore this project's story">
-        {chapters.map((chapter,i)=><a key={chapter.id} href={'#'+chapter.id}><span>{String(i+1).padStart(2,'0')}</span>{chapter.title}</a>)}
-      </nav>}
+      <StoryProgress chapters={chapters}/>
       <div className="fm-detail-story">
         {chapters.map((chapter,i)=><section id={chapter.id} className="fm-detail-chapter" key={chapter.id}>
           <span className="fm-detail-chapter-number">{String(i+1).padStart(2,'0')}</span>
